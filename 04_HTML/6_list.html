@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 내부 스타일 시트 -->
+  <style>
+   html {
+    /* 스크롤 이동을 부드럽게 */
+    scroll-behavior: smooth;
+   }
+
+   span {
+    color: yellow;
+    background-color: black;
+   }
+   div {
+     color: red;
+     background-color: black;
+    }
+  
+  </style>
+
+
+</head>
+<body>
+
+  <!-- list 요소는 주로 메뉴나 탭목록 등 목록을 만들때 쓰임  -->
+  <!-- unordered lisr (블록): 순서가 필요없는 목록 -->
+<ul>
+  <!-- list liem(블록): 목록 내의 각 항목 -->
+  <li> 사과  </li>
+  <li>딸기</li>
+  <li>수박</li>
+  <li>오렌지</li>
+</ul>
+  
+  <!-- ordered lisr (블록): 순서가 있는 목록 -->
+  <ol>
+    <!-- list liem(블록): 목록 내의 각 항목 -->
+    <li> 사과 </li>
+    <li>딸기</li>
+    <li>수박</li>
+    <li>오렌지</li>
+  </ol>
+
+  <!-- 메뉴 구조 만들기 실습 -->
+  <!-- 예) 메인 메누 - 서브메뉴 -->
+<ul>
+  <li>
+    <a href="#">메인 메뉴1 </a>
+  </li>
+  <li>
+    <a href="#">메인 메뉴2</a>
+    <ul>
+      <li><a href="#">서브 메뉴2-1</a></li>
+      <li><a href="#">서브 메뉴2-2</a>
+      <ul>
+        <li><a href="#">서브메뉴2-2-1</a></li>
+        <li><a href="#">서브메뉴2-2-2</a></li>
+        <li><a href="#">서브메뉴2-2-3</a></li>
+      </ul>
+    </li>
+      <li><a href="#">서브 메뉴2-3</a></li>
+      <li><a href="#">서브 메뉴2-4</a></li>
+    </ul>
+  </li>
+     
+  <li>
+    <a href="#">메인 메뉴3</a>
+    <ul>
+      <li><a href="#">서브 메뉴3-1</a></li>
+      <li><a href="#">서브 메뉴3-2</a></li>
+      <li><a href="#">서브 메뉴3-3</a></li>
+      <li><a href="#">서브 메뉴4-4</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#">메인 메뉴4</a>
+    <div>메뉴창입니다
+      <ul>
+        <li><a href="#">공지사항 바로가기</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+
+<!-- anchor(인라인): 닻, 페이지를 이동하는 하이퍼링크 지정 -->
+ <!-- target 속성: 링크된 페이지를 어디에 표시할지 지정
+  _self:현재 탭(기본값)
+  _blank: 새로운 탭  -->
+<a href="https://www.ottogi.co.kr/main/">오뚜기</a>
+<a href="https://www.google.co.kr/?hl=ko" target="_blank">Google</a>
+<a href="https://naver.com/" target="_self">Naver</a>
+
+ <!-- (추가) 임시태그 = '#'사용 -->
+  <a href="#">임시태그</a>
+
+ <!-- 해당 #id 영역으로 이동 -->
+  <a href="#Intro">Intro</a>
+  <a href="#Guide">Guide</a>
+
+<!-- span(인라인): 글자 영역 구분을 위해 사용(주로 글자 스타일 적용할 때) -->
+  <p>
+   <span>동해물</span>과 백두산이 마르고 닳도록
+  </p>
+  
+  <!-- span을 divfh  바꿔보기 
+   div는 글자를 다루는데 적합하지 않음-->
+  <p>
+   <div>동해물</div>과 백두산이 마르고 닳도록
+  </p>
+
+<!-- break(인라인): 줄바꿈  * <br>여러개 넣으면 갯수만큼 줄바꿈!!
+ *HTML에서 엔터키로 줄바꿈 하는것은 공백 1개로 처리-->
+<p>
+  동해물과 백두산이 마르고 닳도록 <br><br> 하느님이 보우하사 우리나라 만세
+</p>
+
+<!-- (참고) HRML 특수문자(HTML Entities) -->
+<!-- 사용 예시 1: HTML에서 공백 처리 (태그: &nbsp;) -->
+<p>
+  동해물과 백두산이 마르고 닳도록 &nbsp;&nbsp;&nbsp; 하느님이 보우하사 우리나라 만세
+</p>
+<!-- 사용 예시 2: <div>를 태그가 아닌 그냥 출력하고 싶다면 (태그: &lt; = < , &gt; = >) -->
+&lt; div &gt;
+<br>
+<!-- :copyright -->
+&copy; copyright
+
+<!-- horizontal rule(블록): 수평줄 -->
+<hr>
+
+<!-- Quiz  -->
+<h3> p, span, br을 이용하여 아래와 같이 출력하기</h3>
+<p>동해물과 백두산이 마르고 닳도록 <br>하느님이 보우하사 <span>우리나라</span> 만세</p>
+
+
+
+  <!-- 임시 태그 이동 테스트 -->
+   <hr>
+   <h2 id="Intro">Intro</h2>
+   <p style="height: 300px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    Pariatur at tempora soluta totam est explicabo quo dolorum sit, nisi nostrum quam doloremque
+    libero eius quis impedit atque quidem in beatae!</p>
+   <p style="height: 300px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Pariatur at tempora soluta totam est explicabo quo dolorum sit, nisi nostrum quam doloremque
+    libero eius quis impedit atque quidem in beatae!</p>
+   <p style="height: 300px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Pariatur at tempora soluta totam est explicabo quo dolorum sit, nisi nostrum quam doloremque
+    libero eius quis impedit atque quidem in beatae!</p>
+    
+    <hr>
+    <h2 id="Guide">Guide</h2>
+    <p style="height: 300px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+     Pariatur at tempora soluta totam est explicabo quo dolorum sit, nisi nostrum quam doloremque
+     libero eius quis impedit atque quidem in beatae!</p>
+    <p style="height: 300px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Pariatur at tempora soluta totam est explicabo quo dolorum sit, nisi nostrum quam doloremque
+     libero eius quis impedit atque quidem in beatae!</p>
+    <p style="height: 300px;"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Pariatur at tempora soluta totam est explicabo quo dolorum sit, nisi nostrum quam doloremque
+     libero eius quis impedit atque quidem in beatae!</p>
+
+</body>
+</html>
