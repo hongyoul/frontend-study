@@ -159,11 +159,11 @@
    <input type="file" id="myfile" multiple>
   <br>
 
-  <!-- 범위 선택(기본값: 0~100) -->
+  <!-- 범위 선택(기본값: 0~100) * step은 올라가는 범위 설정 -->
   <label for="volume">음량(0~10):</label>
-  <input type="range" id="volume" min="0" max="10">
+  <input type="range" id="volume" min="0" max="10" step="4"> 
 
-  <!-- (참고) 음량 옆에 현재 음량(설정값) 숫자(설정값 으)로 나오게 함-->
+  <!-- (참고) 음량 옆에 현재 음량(설정값) 숫자[설정값(으)]로 나오게 함-->
    <span id="volumeValue"></span>
    <script>
     const volumeE1 = document.querySelector('#volume');
@@ -176,7 +176,26 @@
 
    </script>
 
+<hr>
 
+<!-- 비밀(pw)번호 -->
+<label for="pwd">비밀번호:</label>
+<input type="password" id="pwd" maxlength="10">
 
+<hr>
+
+<!-- 셀렉트 박스(콤보 박스) 
+  속성
+   value: 서버로 전송되는 선택한 항목의 실제값 & 선택한 항목의 값을 서버로 보낼 때 필요
+   selected : 항목을 미리 선택
+-->
+<label for="cars">차량선택:</label>
+<select id="cars">
+  <option value="">선택</option>
+  <option value="volvo">Volvo</option>
+  <option value="benz" selected>Benz</option>
+  <option value="audi">Audi</option>
+
+</select>
 </body>
 </html>
