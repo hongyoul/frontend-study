@@ -195,7 +195,32 @@
   <option value="volvo">Volvo</option>
   <option value="benz" selected>Benz</option>
   <option value="audi">Audi</option>
-
 </select>
+
+<hr>
+
+<!-- 여러 줄 입력  *cols - 열, rows - 행 -->
+<p>
+  <label for="multi">여러 줄 텍스트 입력:</label>
+</p>
+<textarea id="multi" cols="30" rows="6"></textarea>
+<br>
+<textarea id="multi" cols="30" rows="6" spellcheck="false">오타 빨간줄 초기화</textarea>
+<br>
+<textarea id="multi" cols="30" rows="6" style="resize: none;">텍스트창 사이즈 조절 설정값</textarea>
+
+<hr>
+
+<!-- (참조) 
+ form: 사용자가 입력한 내용을 어떤 서버 경로로, 어떤 방식(GET, POST 방식)으로 전달할지 설정 -->
+<form action="/longin" method="get"> 
+<!--  name 속성: 사바러 전달될 때 유니크하게 구분하기 위한 이름 -->
+  <input type="text" name="id">
+  <input type="password" name="pw">
+  <button type="submit">로그인</button>
+</form>
+
+
+
 </body>
 </html>
