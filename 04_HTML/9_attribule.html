@@ -53,7 +53,25 @@
   <span id="abc">동해물</span><span class="blue">과</span><span class="red">백두산</span>이 마르고 닳도록
   하느님이 보우하사 <span class="red">우리나라</span> 만세
   
-  <!--  -->
+  <br><br>
+
+  <!-- date : 요소에 데이터를 저장하는 용도(사용자 정의 속성을 만듦) -->
+  <!-- JS에서 date 안에 속성에 저장한 데이터를 꺼내서 이용 가능  -->
+   <!-- 사용법 :
+        date - 내가 원하는 이름 작명 ="데이터" -->
+    <div data-fruit-name="apple">사과</div>
+    <div data-fruit-name="banana">바나나</div>
+    <script>
+      // div 태그를 모두 찾아서 elements 라는 이름의 저장공간(변수)에 담아라
+      const elements = document.querySelectorAll('div'); /* All이 없으면 찾으려는 해당태그 전부를 가져올 수 없음.*/
+      console.log(elements);
+      // 찾는 요소들을 하나씩 반복해가면서 el에 다시 담고
+       elements.forEach(el => { //"forEach"는 목록에서 하나씩 꺼내 올 수 있도록 하는 것
+        // console.log(el.dataset.fruit-name); // 실행 안됨
+        // el 안에  "dataset"안에 작명한 이름으로 접근
+        console.log(el.dataset.fruitName); // "dataset"는 위쪽에 데이터를 의미함, JS 표기법(카멜케이스) 준수
+       });
+    </script>
 
   </body>
 </html>
