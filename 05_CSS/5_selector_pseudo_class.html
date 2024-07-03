@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 1. (어떤한 행동을 했을 때 동작하는) 가상 클래스 선택자 */
+    /* : hover (마우스 커서가 올라가 있는 동안 선택(클릭시X)) */
+
+    a:hover{
+      color: rgb(238, 18, 18);
+    }
+
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: rgb(130, 75, 3);
+      transition: 3s;
+    }
+    /* Quiz! 마우스 커서가 올라가면 가로, 세로, 길이 늘리고 배경색 변경되게 하시오 */
+    /* .box:hover{
+      width: 250px;
+      height: 50px;
+      background-color: rgb(250, 231, 231);
+    } */
+
+    /* active (마우스를 클릭하고 있는 동안 선택) */
+    /* 모바일에서 : hover 대신에 꼼수로 사용할 때 있음 */
+    /* 버튼을 누르는 효과를 줄 때 잘 활용한 예시(보통은 버튼 색상만 변경): 
+       https://codepen.io/jooing/pen/jOMybXY */
+    
+    a:active{
+      color: lime;
+    }
+    .box:active{
+      width: 300px;
+      background-color: rgb(191, 191, 239);
+    }
+
+    /* :focus (요소가 포커스 (활성화)되면 선택) */
+    /* HTML 대화형(사용자와 상호작용이 되는 것) 요송 사용 가능 
+      예: input, a, button,label,select, textarea 등  */
+      /* 예시 더 찾아 보려면 구글검색: "HTML 대화형 콘텐츠 mdn" 으로 검색 */
+      input:focus{
+        background-color: orange;
+      }
+
+      /* 2. (특정한 요소를 선택하는) 가상 클래스 선택자 */
+      /* :first-child (첫번째 자식 요소)
+         :last-child (마지막 자식 요소)
+       */
+
+       .fruits span:first-child{
+        color: rgb(217, 180, 252);
+       }
+       /* div가 3번째 자식이라 선택안됨 */
+       /* .fruits span:first-child{
+        color: blueviolet;
+       } */
+
+       .fruits h3:last-child{
+       color: chartreuse;
+       }
+
+       /* :nth-child(n) (n번째 자식 요소) */
+       .fruits *:nth-child(3){
+        color: red;
+       }
+
+  </style>
+</head>
+<body>
+  <a href="https://www.naver.com">NAVER</a>
+
+  <div class="box"></div>
+
+<hr>
+
+<input type="text">
+
+<hr>
+
+<div class="fruits">
+  <span>딸기</span>
+  <span>수박</span>
+  <div>오렌지</div>
+  <p>망고</p>
+  <h3>사과</h3>
+</div>
+
+</body>
+</html>

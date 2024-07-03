@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    *{font-size: 25px;}
+    *{font-size: 15px;}
     /* 복합 선택자: 기본 선택자를 조합해서 사용하는 선택자 */
     /* 1. 일치 선택자: 동시에 만족하는 요소를 선택 */
     
@@ -47,6 +47,30 @@
       color: aquamarine; // 실행 됨
     }  */
 
+    /* button{
+      display: block;
+    } */
+/* 
+    input{
+      display: block;
+    }
+
+    input{
+      margin-bottom: 5px;
+    }
+
+    input:nth-child(6){
+      margin-bottom: 0;
+    }  */
+
+    input+input{
+      margin-top: 10px;
+    }
+
+    button+button{
+      margin-left: 16px;
+    }
+
 </style>
 </head>
 <body>
@@ -55,8 +79,6 @@
       <li>사과</li>
       <li>딸기</li>
       <li class="orange">오렌지</li>
-      <li>망고</li>
-      <li>수박</li>
     </ul>
     <div>당근</div>
       <p>토마토</p>
