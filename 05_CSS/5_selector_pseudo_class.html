@@ -54,17 +54,31 @@
        .fruits span:first-child{
         color: rgb(217, 180, 252);
        }
+
        /* div가 3번째 자식이라 선택안됨 */
        /* .fruits span:first-child{
         color: blueviolet;
        } */
 
-       .fruits h3:last-child{
+       /* .fruits h3:last-child{
        color: chartreuse;
-       }
+       } */
 
        /* :nth-child(n) (n번째 자식 요소) */
-       .fruits *:nth-child(3){
+       /* .fruits *:nth-child(3){
+        color: red;
+       } */
+       
+       /* .fruits *:nth-child(2n){
+        color: red;
+       } */
+       
+       /* .fruits *:nth-child(2n+1){
+        color: red;
+       } */
+       
+       /* 2번째 자식부터 전부 다 */
+       .fruits *:nth-child(n+2){
         color: red;
        }
 
