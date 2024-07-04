@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 가상 요소 선택자: HTML에 가상의 요소를 생성 또는 제어 기능 */
+    /* 
+    ::before, ::after 사용 시 반드시 CSS의 content 속성이 같이 사용
+    */
+
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: rgb(185, 131, 236);
+
+      overflow: auto; /* overflow: auto; 넘친내용 스크롤바 만드는 속성*/
+    }
+
+    /* ::before (요소의 내부 앞에 내용 삽입) 
+                기본요소가 인라인 요소이기 때문에 블록요소로 넣고 싶으면 인라인->블록 으로 변경해야함
+    */
+    /* .box::before{
+      content: "앞에 나온다!!";
+    } */
+
+    /* ::after (요소의 내부 뒤에 내용 삽입) */
+    .box::after{
+      content: "뒤에 나온다!!";
+    }
+    
+    /* 꼭 텍스트가 아니어도 됨!
+    단, content 속성은 ""로 값을 비워두더라도 필수로 작성
+    */
+
+    .box::after{
+      content:"";
+      width: 10px;
+      height: 30px;
+      background-color: brown;
+
+      /* 가상요소는 인라인 요소이기 때문에 가로/세로 길이 지정불가 => 블록 요소로 전환 해야됨 */
+      display: block;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+    }
+    
+    .menu li {
+      position: relative;
+    }
+    
+    .menu li + li::before {
+    content: ""; /* 필수 속성 */
+    display: block;
+    width: 3px;
+    height: 12px;
+    background-color: rgb(255, 163, 97);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .menu li a{
+    text-decoration: none;
+    color: #656565;
+    padding: 0 15px;
+  }
+  .menu li a:hover {
+    text-decoration: underline;
+    color: rgb(255, 163, 97);
+  }
+
+  /* 잘 활용하면 HTML 구조 추가오 class 속성 값의 추가 없이 제어 가능 */
+
+  /* :placeholder, ::-webkit-scrollbar 가상요소 */
+  /* 스크롤바 너비 */
+  .custom-scroll::-webkit-scrollbar {
+    width: 6px;
+  }
+  /* 스크롤바 트랙 */
+  .custom-scroll::-webkit-scrollbar-track {
+    background-color: plum;
+    border-radius: 3.5px;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(211, 0, 211);
+    border-radius: 3.5px;
+  }
+  .custom-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(82, 3, 82);
+    border-radius: 3.5px;
+  }
+
+  </style>
+</head>
+<body>
+ 
+
+  <div class="box">
+    Content!
+  </div>
+
+  <hr>
+
+  <!-- Tip! 메뉴 항목 사이에 세로바 넣기 -->
+   <ul class="menu">
+    <li><a href="#">회사소개</a></li>
+    <li><a href="#">인재채용</a></li>
+    <li><a href="#">제휴제안</a></li>
+    <li><a href="#">이용약관</a></li>
+    <li><a href="#">고객센터</a></li>
+   </ul>
+   
+   <hr>
+
+   <!-- Tip! 커스텀 스크롤바 만들기 -->
+    <div class="box custom-scroll">
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+      Content!
+    </div>
+</body>
+</html>

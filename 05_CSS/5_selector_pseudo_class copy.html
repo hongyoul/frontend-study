@@ -51,9 +51,9 @@
          :last-child (마지막 자식 요소)
        */
 
-       .fruits span:first-child{
+       /* .fruits span:first-child{
         color: rgb(217, 180, 252);
-       }
+       } */
 
        /* div가 3번째 자식이라 선택안됨 */
        /* .fruits span:first-child{
@@ -78,8 +78,27 @@
        } */
        
        /* 2번째 자식부터 전부 다 */
-       .fruits *:nth-child(n+2){
+       /* .fruits *:nth-child(n+2){
         color: red;
+       } */
+
+       /* .fruits *:nth-child(even){ // even = 짝수, odd = 홀수
+        color: red;
+       } */
+       
+       /* .fruits *:nth-child(odd){ 
+        color: red;
+       } */
+
+       /* Quiz: 자식들 중 앞에 3개만 선택 (n이 앞에 나오지 않으면 동작을 안함)
+        풀이 ↓
+       .fruits *:nth-child(-n+3){
+        color: red;
+       }  */
+
+       /* :not(선택자 s를 제외) */
+       .fruits *:not(span, h3){
+        color: rgb(52, 233, 233);
        }
 
   </style>
