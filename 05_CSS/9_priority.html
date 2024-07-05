@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 라이브러리에서 적용된 스타일을 커스텀 하고자 한다면 최소한 동일한 우선 순위 점수 이상으로 지정 */
+
+    /* 우선순위 점수가 낮은거부터 실습 */
+    /* body(상속) → * → 태그 → 클래스 → 아이디 → 인라인 → !inportant */
+
+    /* 정말 스타일이 무조건 보장되야 하거나 절대 변경되면 안된는 경우에만 사용. */
+    div{
+      color: pink !important;
+    }
+
+    #hello{
+      color: rgb(255, 255, 0);
+    }
+
+    /* 선택자를 여러개 사용하여 명확하게 선택하면 우선순위 점수가 올라감 */
+    div.hello{
+      color: green;
+    }
+
+    .hello{ /*점수 동일*/
+      color: orange;
+    }
+
+    .hello{ /*점수 동일: 점수가 같으면 동일 점수의 제일 마지막에 있는게 적용*/
+      color: blueviolet;
+    }
+
+    div {
+      color: red;
+    }
+
+    *{
+      color: blue;
+    }
+
+    body{
+      color: violet;
+    }
+  </style>
+</head>
+<body>
+  <div
+    id="hello"
+    class="hello"
+    style="color: olive;" 
+    >
+    <!-- 인라인 스타일 적용 -->
+    Hello World!
+  </div>
+  </div>
+</body>
+</html>

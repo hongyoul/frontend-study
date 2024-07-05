@@ -15,10 +15,10 @@
 
   3. 다음 중 가상 클래스 선택자가 아닌 것을 고르세요.
   1) :hover
-  2) :before
+  2) :before (v) -> ::befored 의 맞는거
   3) :nth-child(n)
   4) :focus 
-  5) :last-child (v)
+  5) :last-child 
 
   (4~9번까지) 지금까지 배운 선택자를 활용해 다음 문장에 나온 조건에 맞게 선택자를 작성해 보세요.
   4. p 태그를 모두 선택합니다.
@@ -56,7 +56,12 @@
       color: blueviolet;
     }
   /* 7번 */
-  section > div{     
+  /* 모범 답안
+  section div{     하위는 띄어쓰기
+    color: green;
+  } 
+  */
+  section > div{     /*하위 선택인데 자식으로 선택하였음*/
     color: green;
   }
   /* 8번 */
@@ -64,7 +69,7 @@
     color: rgb(255, 5, 180);
   }
   /* 9번 */
-  [href="https://www.naver.com"]{
+  a[href="https://www.naver.com"] span {
     color: black;
     font-size: 35px;
   }
