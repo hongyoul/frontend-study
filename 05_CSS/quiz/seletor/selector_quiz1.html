@@ -9,16 +9,16 @@
   2. 다음 중 선택자와 구분 기호가 잘못 연결된 것을 고르세요.
   1) 그룹 선택자 - ,
   2) 자식 선택자 - >
-  3) 하위 선택자 - /
+  3) 하위 선택자 - / (v)
   4) 인접 형제 선택자 - +
-  5) 일반 형제 선택자 - ~  (v)
+  5) 일반 형제 선택자 - ~  
 
   3. 다음 중 가상 클래스 선택자가 아닌 것을 고르세요.
   1) :hover
   2) :before
   3) :nth-child(n)
-  4) :focus (v)
-  5) :last-child
+  4) :focus 
+  5) :last-child (v)
 
   (4~9번까지) 지금까지 배운 선택자를 활용해 다음 문장에 나온 조건에 맞게 선택자를 작성해 보세요.
   4. p 태그를 모두 선택합니다.
@@ -48,19 +48,25 @@
     }
 
   /* 5번 */
-  .box div{
-    color: orange;
+  #title{
+    color: cornflowerblue;
   }
   /* 6번 */
-
+    div.box{ 
+      color: blueviolet;
+    }
   /* 7번 */
-  
+  section > div{     
+    color: green;
+  }
   /* 8번 */
-  .userId :last-child{
-    color: orangered;
+  label + input{
+    color: rgb(255, 5, 180);
   }
   /* 9번 */
- 
+  [href="https://www.naver.com"]{
+    color: black;
+  }
 
 
    </style>
