@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+     .main-background {
+      width: 100%;
+
+      /* 섹션의 높이를 잡을 때 안줄 수 있으면 안주는게 좋음 */
+      /* height값을 안주면 a태그 p태그 등을 넣으면 알아서 높이를 화면에 맞춰 조정해줌 */
+      height: 500px;
+
+      background-image: url("./images/shoes.jpg");
+      /* 백그라운드 반복되지 않게 */
+      background-repeat: no-repeat;
+      /* 백그라운드 가운데 정렬 */
+      background-position: center;
+      /* cover : 비율을 유지하면서 꽉 채우는 것 */
+      background-size: cover;
+      /* 텍스트 가운데 정렬 */
+      text-align: center;
+
+      /* 뷰포트 상단 공백부분 padding으로 채움(내부여백) */
+      /* margin상쇄 : margin이 겹치면 margin끼리 경합이 일어나서 제일 큰 하나만 살아남음 */
+      /* 글자, 이미지 등의 요소와 요소 사이는 margin으로 */
+      /* margin과 padding 중 정답은 없으나 요소들끼리 배치할 때 사이사이는 margin */
+      padding-top: 50px;
+      
+      /* relative써서 위치를 옮겨도 영역안에 계속 위치하고 있음 */
+      position:relative;
+    }
+
+    .main-title {
+      color: #fff;
+      font-size: 40px;
+    }
+
+    .main-content {
+      color: #fff;
+    }
+
+    .main-button {
+      padding: 10px 30px;
+      font-size: 20px;
+      background-color: #fff;
+      /* 테두리 없애기 */
+      border: none;
+      /* 모서리 둥글게 */
+      border-radius: 5px;
+      /* 글자 사이 margin으로 */
+      margin-top: 20px;
+      /* 클릭할 수 있는 요소들(커서모양바꾸기) */
+      cursor: pointer; /* 가장 많이 쓰임 */
+      /* cursor: grab; */
+    }
+
+    .main-button:hover {
+      background-color: #eee;
+    }
+
+    /* 겹치는 레이아웃 만들기 */
+    .sub-description {
+      /* 화면이 작을 때는 부모 width의 80%만,
+         넓어지면 최대 700px까지 */
+         width: 80%;
+
+         /* 최대 가로 길이 700px까지만 */
+         max-width: 700px;
+         background-color: #eee;
+         padding: 10px;
+         border-radius: 20px;
+
+         /* 1) relative 사용 시 */
+         /* relative : 현재 자기 자신의 위치 기준 
+         position: relative;
+
+         /* 현재 내 위치를 기준으로 top에서 120px만큼 
+         top: 120px;
+
+         /* 박스 가운데 정렬 */ 
+         /* margin: 0 auto; */
+
+         /* 2) absolute 사용 시 */
+         /* absolute사용 시 붕 뜨기 때문에 height에 500px를 줘야함(.main-background에 height) */
+         /* absolute는 margin: 0 auto; 안먹힘 아래와 같이 left, right 0 주고 margin: auto; */
+         position: absolute;
+
+         /* 바닥을 기준으로 -100만큼 떨어트림 */
+         bottom: -100px;
+
+         /* 왼쪽을 딱 붙이려고하고 오른쪽을 딱 붙이려고 한뒤 */
+         left: 0;
+         right: 0;
+         /* margin:auto를 하면 자동으로 똑같이 계산이 됨(가운데 정렬) */
+         margin: auto;
+    }
+
+    .history {
+      background-color: #aeaeae;
+      padding: 100px 20px 40px;
+    }
+
+    .history > h4 {
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="main-background">
+    <h4 class="main-title">Buy our excellent shoes!</h4>
+    <p class="main-content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, voluptatem sapiente atque magni voluptatum veritatis, officiis corrupti itaque sequi nisi ducimus ipsa, deserunt ut doloremque possimus animi ratione. Doloremque, recusandae.
+    </p>
+    <button type="button" class="main-button">Buy Now</button>
+    
+    <div class="sub-description">
+      <h4>How we design our shoes</h4>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+        Perferendis mollitia voluptatum delectus dolorem.<br>
+        Adipisci ducimus itaque dolorem similique quae sint possimus!<br>
+      </p>
+    </div>
+  </div>
+
+  <div class="history">
+    <h4>Our best shoes & History</h4>
+    <ul>
+      <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, minima non ut blanditiis, mollitia veniam excepturi quia corporis provident quibusdam fuga odit modi repellat voluptas saepe libero quam, praesentium nihil?</li>
+      <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum accusamus molestiae possimus distinctio cupiditate culpa, aut velit commodi et! Rerum est, ad repellendus vero distinctio ab modi dicta officia voluptates?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, molestias et soluta at atque officia perferendis voluptates ipsa, animi optio dolor ex aperiam asperiores quasi quis, iste velit. Omnis, veniam?</li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione eos ipsam facilis error dolorum quidem sunt exercitationem, iure atque quis reprehenderit sapiente esse similique tenetur a harum. Cumque, veritatis id!</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum qui nobis beatae fugiat quam dolorem blanditiis?</li>
+    </ul>
+  </div>
+</body>
+</html>
