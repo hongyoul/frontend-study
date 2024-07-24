@@ -32,13 +32,70 @@
     }
 
     .form-background {
-      background-color: #333;
+      width: 90%;
+      max-width: 600px;
+      background-color: gray;
       padding: 30px 0;
+      margin: 0 auto;
     }
 
     .form-container {
       /* 가로 길이는 80%를 차지하다가 600px에서 더 이상 안늘어나도록 제한 */
+      width: 80%;
+      max-width: 400px;
+      background-color: white;
+      padding: 30px;
+      margin: 0 auto;
     }
+
+    .form-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 20px;
+      border: 2px solid #eee;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.5s;
+    }
+
+    .form-input:focus {
+      border: 2px solid #aaa;
+      /* border-color: #aaa; */
+    }
+
+    .name-box{
+      display: flex;
+    }
+
+    .name-box > div:first-child {
+      width: 50%;
+      padding: 10px 10px 10px 0;
+    }
+
+    .name-box > div:last-child {
+      width: 50%;
+      padding: 10px 0 10px 10px;
+    } 
+
+    .btn-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+     
+    .btn-send {
+      padding: 8px 40px;
+      color: #fff;
+      background-color: lightcoral;
+      border: none;
+      border-radius: 4px;
+      transition: 0.5s;
+    }
+
+    .btn-send:hover {
+      background-color: rgb(251, 72, 72);
+    }
+
   </style>
 </head>
 <body>
@@ -64,6 +121,42 @@
       <form>
         <h3>Contact Us</h3>
 
+        <div>
+          <!-- label for="email"input ~id="email"랑 동일해야함-->
+        </p>
+        <label for="email">Your Email</label>
+        <p>
+          <input type="email" id="email" class="form-input" placeholder="email@example.com"> 
+        </div>
+        
+        <div class="name-box">
+          <div>
+            <p>
+              <label for="firstname">First Name</label>
+            </p>
+            <input type="test" id="firstname" class="form-input"> 
+          </div>
+            
+          <div>
+            <p>
+              <label for="lastname">Last Name</label>
+            </p>
+            <input type="test" id="lastname" class="form-input"> 
+          </div>
+        </div>
+        
+        <p>
+          <label for="msg">Message</label>
+        </p>
+        <textarea id="mag" class="form-input"></textarea>
+
+        <div class="btn-box">
+          <div>
+            <input type="checkbox" id="agree">
+            <label for="agree">Agree</label>
+          </div>
+          <button type="submit" class="btn-send">SEND</button>
+        </div>
       </form>
     </div>
   </div>
