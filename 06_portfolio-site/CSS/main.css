@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+html {
+  /* 스크롤 이동 부드럽게 */
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
@@ -35,6 +39,63 @@ img {
   /* 이미지가 인라인 요소라서 발생하는 문자 기준선(baseline) 아래의 공간을 제거하기 위해 */
   display: block;
 }
+
+.title {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title::after {
+  /* before,after 사용시 content은 필수 속성 */
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: #333;
+  margin: 10px auto 0;
+}
+
+.bth {
+  width: 120px;
+  padding: 10px;
+  display: block; /*a, span 태그 같은 인라인 요소를 버튼으로 사용할 수도 있으니 블록으로 지정 */
+  border: 2px solid #333;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.bth:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.bth.bth--brown {
+  color: #592b18;
+  border-color: #592b18;
+}
+
+.bth.bth--brown:hover {
+  color: #fff;
+  background-color: #592b18;
+}
+
+/* .bth.bth--sky {
+  color: #07394B;
+  background-color: #fff; 
+}
+
+.bth.bth--sky:hover {
+  color: #07394B;
+  background-color: #b9e3f9; 
+  font-weight: 800; 
+} */
+
 
 /* HEADER */
 header {
@@ -70,8 +131,8 @@ header nav ul li {
 }
 
 header nav ul li a:hover {
-  color: rgb(255, 136, 0);
-  text-shadow: 1.7px 2.2px 2px rgb(108, 108, 108);
+  color: #98EFFC;
+  text-shadow: -2px 2px 1px #07394B;
   font-weight: 650;
 }
 
@@ -103,6 +164,7 @@ header nav ul li a:hover {
 
 .about .inner {
   padding-bottom: 30px;
+  position: relative;
 }
 
 .about .about__wrapper {
@@ -125,4 +187,201 @@ padding: 30px;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
+}
+.about .about__wrapper .about__text .slogan {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.about .about__wrapper .about__text h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.about .about__wrapper .about__text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.about .about__wrapper .about__text li {
+  line-height: 1.8;
+}
+
+.about .about__bth {
+position: absolute;
+bottom: 0;
+right: 30px;
+}
+
+.about .about__bth img {
+  display: inline;
+  width: 28px;
+  margin-right: 10px;
+  vertical-align: middle; /* vertical-align: middle -> 이미지와 글자 중앙에 맞게 하는 방법 (글자 베이스라인에 맞추기 때문에 중앙에 오지 않음)*/
+}
+
+/* SKILL */
+.skill {
+  padding-top: 200px;
+}
+
+.skill .skill__list {
+  height: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.skill .skill__list > li {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+/* 애니메이션 효과 주기 */
+opacity: 0;
+transition: 1.3s;
+
+/* 방법1 : position */
+  /* position: relative; */
+  /* top: 100px; */
+
+/* 방법2 : transform */
+  transform: translateY(100px);
+}
+
+.skill.show .skill__list > li {
+  opacity: 1;
+
+  /* 방법1 : position */
+  /* top: 0; */
+
+  /* 방법2 : transform */
+  transform: translateY(0);
+}
+
+.skill.show .skill__list > li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.skill.show .skill__list > li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.skill.show .skill__list > li:nth-child(3) {
+  transition-delay: 0.6s;
+}
+.skill.show .skill__list > li:nth-child(4) {
+  transition-delay: 0.8s;
+}
+.skill.show .skill__list > li:nth-child(5) {
+  transition-delay: 1s;
+}
+
+.skill .skill__list li div {
+  width: 103px;
+  height: 55px;
+background-color: #b9e3f9;
+border-radius: 50%;
+transform: rotate(-18deg);
+transition: 0.5s;
+}
+
+.skill .skill__list li:hover div {
+  transform: rotate(0deg);
+}
+
+.skill .skill__list li div p {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: -2px;
+}
+
+.skill .skill__list li h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 30px 0 20px;
+}
+
+/* WORK */
+.work {
+  padding-top: 200px;
+}
+
+.work .port {
+  display: flex;
+}
+
+.work .port .port__img, .work .port .port__text {
+  width: 50%;
+}
+
+.work .port .port__img img {
+  width: 100%;
+  height: 100%;
+}
+.work .port .port__text {
+  font-size: 14px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.work .port .port__text h3 {
+  font-size: 20px;
+  font-weight: 800px;
+}
+
+.work .port .port__text li {
+  line-height: 1.8;
+}
+
+.work .port .port__text li span {
+  font-weight: 800;
+}
+
+.work .port .bth-group {
+display: flex;
+column-gap: 40px;
+}
+
+
+/* MODAL */
+#modal {
+  /* 화면 전체 영역 덮기 : 모달외에 클릭이 안되도록 하는 용도 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  /* display: flex; */
+  justify-content: center; 
+  align-items: center;
+  display: none;
+
+}
+
+#modal .modal__inner {
+  width: 80%;
+  position: relative;
+}
+
+#modal .modal__inner img {
+  width: 100%;
+}
+
+#modal .modal__inner .btn-close {
+  font-size: 40px;
+  color: #fff;
+  background-color: #eaeaea;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#modal .modal__inner .btn-close:hover {
+  background-color: #333;
 }

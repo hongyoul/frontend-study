@@ -32,6 +32,11 @@
 rel="stylesheet">
 
 <link rel="stylesheet" href="CSS/main.css">
+
+<!-- ScrollMagic -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" inputmode="" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script defer src="js/main.js"> </script>
 </head>
 <body>
   <!-- 폰트 테스트 -->
@@ -72,6 +77,13 @@ rel="stylesheet">
   <div class="inner">
     <h2 class="title">ABOUT</h2>
     <div class="about__wrapper">
+      <!-- 연락처 버튼 -->
+      <div class="about__bth font-en">
+        <a href="#contact">
+          <img src="images/icon/icon_contact.png" alt="전화">CONTACT
+        </a>
+      </div>
+       
       <div class="about__img">
         <!-- 본인 프로필 이미지로 변경 -->
         <img src="images/profile.jpg" alt="프로필">
@@ -91,5 +103,123 @@ rel="stylesheet">
     </div>
   </div>
 </section>
+
+<!-- SkILL -->
+<section id="skill" class="skill scroll-spy">
+  <div class="inner">
+    <h2 class="title font-en">SKILL</h2>
+    <ul class="skill__list">
+
+      <!-- 스킬 추가하려면 li 요소 복사 붙여넣기 -->
+      <li>
+        <div class="font-en">
+          <p>Java</p>
+        </div>
+        <h3 class="font-en">Java<br>Programing</h3>
+        <ul>
+          <li>객체지향</li>
+          <li>람다식</li>
+          <li>파일 입출력</li>
+          <li>JDBC</li>
+        </ul>
+      </li>
+      <li>
+        <div class="font-en">
+          <p>Html</p>
+        </div>
+        <h3 class="font-en">HTML5</h3>
+        <ul>
+          <li>웹페이지 구조 설계</li>
+          <li>시맨틱 태그</li>
+        </ul>
+      </li>
+      <li>
+        <div class="font-en">
+          <p>Css</p>
+        </div>
+        <h3 class="font-en">CSS3</h3>
+        <ul>
+          <li>웹페이지 레이아웃 설계</li>
+          <li>웹페이지 디자인</li>
+          <li>반응형 제작</li>
+        </ul>
+      </li>
+      <li>
+        <div class="font-en">
+          <p>Js</p>
+        </div>
+        <h3 class="font-en">JavaScript</h3>
+        <ul>
+          <li>DOM 조작, 제어</li>
+          <li>이벤트 처리</li>
+          <li>비동기 통신</li>
+        </ul>
+      </li>
+      <li>
+        <div class="font-en">
+          <p>React</p>
+        </div>
+        <h3 class="font-en">React JS</h3>
+        <ul>
+          <li>SPA 개발</li>
+          <li>전역 상태 관리</li>
+          <li>클라이언트 라우팅</li>
+          <li>CSR 방식 앱개발</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work" class="work font-en">
+  <div class="inner">
+    <h2 class="title">WORK</h2>
+    <div class="port">
+      <div class="port__img">
+        <img src="images/work_1.jpg" alt="포토폴리오1">
+      </div>
+      <div class="port__text">
+        <h3>프로젝트명</h3>
+        <ul>
+          <li><span>주요기능 : </span>주요 기능 설명</li>
+          <li><span> 적용 기술 : </span>HTML, CSS, JS, Java, Spring Boot</li>
+          <li><span> GitHub : </span>깃 허브 주소</li>
+          <li><span> URL : </span>배포 주소</li>
+        </ul>
+        <div class="bth-group">
+          <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="bth">README</a>
+          <a href="javascript:void(0)" class="bth bth--brown btn-modal">모달</a>
+        </div>
+      </div>
+    </div>
+    <div class="port">
+      <div class="port__img">
+        <img src="images/work_2.jpg" alt="포토폴리오2">
+      </div>
+    <div class="port__text">
+      <h3>프로젝트명</h3>
+      <ul>
+        <li><span>주요기능 : </span>주요 기능 설명</li>
+        <li><span> 적용 기술 : </span>HTML, CSS, JS, Java, Spring Boot</li>
+        <li><span> GitHub : </span>깃 허브 주소</li>
+        <li><span> URL : </span>배포 주소</li>
+      </ul>
+      <div class="bth-group">
+        <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="bth">README</a>
+        <a href="javascript:void(0)" class="bth bth--brown btn-modal">모달</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="modal">
+  <div class="modal__inner">
+    <img src="images/work_4.jpg" alt="샘플">
+    <span class="material-symbols-outlined btn-close">close</span>
+  </div>
+</div>
+
 </body>
 </html>
