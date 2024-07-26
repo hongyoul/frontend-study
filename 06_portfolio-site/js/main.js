@@ -27,3 +27,12 @@ modalBtn[0].addEventListener('click', function(){
 closeBtn.addEventListener('click', function(){
   modalEl.style.display = 'none';
 });
+
+
+// 현재 연도 표시
+// 날짜 정보를 가진 JS의 Date 객체를 활용
+new Date().getFullYear(); // 현재 연도 정보가 데이터로 반환됨
+console.log(new Date().getFullYear());
+
+let thisYear = document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear();
