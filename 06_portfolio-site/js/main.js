@@ -20,11 +20,11 @@ console.log(modalBtn);
 console.log(modalBtn[0]);
 console.log(modalBtn[1]);
 
-modalBtn[0].addEventListener('click', function(){
+modalBtn[0].addEventListener('click', function () {
   // console.log('클릭됨');
   modalEl.style.display = 'flex';
 });
-closeBtn.addEventListener('click', function(){
+closeBtn.addEventListener('click', function () {
   modalEl.style.display = 'none';
 });
 
@@ -36,3 +36,26 @@ console.log(new Date().getFullYear());
 
 let thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();
+
+// 페이지 최상단으로 이동
+let toTopBtn = document.querySelector('#to-top');
+
+// 페이지에 스크롤 이벤트 감지를 추가
+// window : 브라우저 창 객체
+window.addEventListener('scroll', function () {
+  // console.log(window.scrollY); // Y축 스크롤 위치
+
+  // 페이지 스크롤 위치가 
+  // 500px을 넘으면 요소를 보이고,
+  // 500px을 넘지 않으면 숨기기!
+  if (this.window.scrollY > 500) {
+    // toTopBtn.style.display = 'flex'; // 스타일 넣을때는 style을 넣어줘야 함
+    toTopBtn.style.opacity = 1;
+    toTopBtn.style.transform = 'translateX(0)';
+
+  } else {
+    // toTopBtn.style.display = 'none'; // display = 'none'일때 애니메이션 처리가 안됨
+    toTopBtn.style.opacity = 0;
+    toTopBtn.style.transform = 'translateX(100px)';
+  }
+});
