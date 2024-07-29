@@ -6,9 +6,7 @@ spyEls.forEach(function(spyEl){
 new ScrollMagic.Scene({ // 감시할 장면 추가 및 옵션 지정
   triggerElement: spyEl, // 화면에 보여짐 여부를 감시할 요소 지정
   triggerHook: 0.5 // 화면의 50% 지점에서 보여짐 여부 감시 (0~1사이 지정)
-})
-
-  .setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show클래스 추가
+}).setClassToggle(spyEl, 'show') // 요소가 화면에 보이면 show클래스 추가
   .addTo(new ScrollMagic.Controller());
 });
 
@@ -16,9 +14,14 @@ new ScrollMagic.Scene({ // 감시할 장면 추가 및 옵션 지정
 let modalEl = document.querySelector('#modal');
 let modalBtn = document.querySelectorAll('.port .btn-modal');
 let closeBtn = document.querySelector('#modal .btn-close');
+let modalProfileButton = document.querySelector('#phj_modalButton');
+let div_profilePopup = document.querySelector('#hj_profilePopup'); 
+let div_PopupBackGround = document.querySelector('#hj_PopupBackGround'); 
 console.log(modalBtn);
 console.log(modalBtn[0]);
 console.log(modalBtn[1]);
+console.log(modalProfileButton);
+
 
 modalBtn[0].addEventListener('click', function () {
   // console.log('클릭됨');
@@ -27,6 +30,16 @@ modalBtn[0].addEventListener('click', function () {
 closeBtn.addEventListener('click', function () {
   modalEl.style.display = 'none';
 });
+modalProfileButton.addEventListener('click', function(){
+  div_profilePopup.style.display = 'flex'
+  div_PopupBackGround.style.display = 'flex';
+})
+
+hj_PopupBackGround.addEventListener('click', function(){
+  div_profilePopup.style.display = 'none'
+  div_PopupBackGround.style.display = 'none';
+})
+
 
 
 // 현재 연도 표시

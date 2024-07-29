@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hong Youl, Yun</title>
-   
+  
   <!-- 파비콘(Favicon) 적용 
     파비콘(Favicon.ico))은 프로젝트 폴더 최상위 (Root) 경로에 포함시키면 자동 적용 
     최상위 경로에 없거나, ico가 아닌 별도 파일을 가진 경우에는 <link>로 적용
@@ -71,6 +71,33 @@ rel="stylesheet">
     <source src="videos/movie2.mp4" type="video/mp4"> <source>
   </video>
 </section>
+
+<!-- 박현준 수정 Start -->
+<section id="about" class="about" attribute="test">
+  <div class="inner">
+    <h2 class="title">???</h2>
+    <div class="about__wrapper profile_hj">
+
+       
+      <div class="about__img">
+        <!-- 본인 프로필 이미지로 변경 -->
+        <img src="images/profile.jpg" alt="프로필">
+      </div>
+      <a href="javascript:void(0)" id="phj_modalButton" class="bth bth--brown btn-modal">프로필</a>
+      <!-- 연락처 버튼 -->
+      <div class="about__bth font-en">
+        <a href="#contact">
+          <img src="images/icon/icon_contact.png" alt="전화">CONTACT
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- 박현준 수정 End -->
+
+
+
+
 
 <!-- ABOUT  -->
 <section id="about" class="about">
@@ -266,5 +293,46 @@ rel="stylesheet">
     <span class="material-symbols-outlined">arrow_upward</span>
   </a>
 </div>
+
+<!-- 프로필 팝업 노출-->
+<div id="hj_profilePopup">
+
+  <!---->
+  <section id="hj_profilePopupSection" class="about">
+    <div class="inner" id = "div_profilePopupinner">
+      <h2 class="title">ABOUT</h2>
+      <div class="about__wrapper">
+        <!-- 연락처 버튼 -->
+        <div class="about__bth font-en">
+          <a href="#contact">
+            <img src="images/icon/icon_contact.png" alt="전화">CONTACT
+          </a>
+        </div>
+         
+        <div id= "div_profilePopupImg" class="about__img">
+          <!-- 본인 프로필 이미지로 변경 -->
+          <img src="images/profile.jpg" alt="프로필">
+        </div>
+        <div class="about__text">
+          <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
+          <strong class="slogan font-en">Simple is Best</strong>
+          <h3 class="font-en">Yun Hong Youl</h3>
+          <div>
+            <h4 class="font-en">EDUCATION</h4>
+              <ul>
+                <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
+                <li>23.12 ~ 24.05 풀스택 개발자 과정 수료</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+</div>
+
+
+<div id="hj_PopupBackGround">
+</div>
+
 </body>
 </html>
