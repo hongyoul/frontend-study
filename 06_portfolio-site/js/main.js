@@ -61,6 +61,11 @@ window.addEventListener('scroll', function () {
 });
 
 
+
+
+
+// face는 왜? 가운데로 안올까요?
+
 $(document).ready(function(){
     
   var mainCtr = $("#main-ctr"),
