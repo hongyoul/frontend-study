@@ -7,13 +7,14 @@ html {
   /* 스크롤 이동 부드럽게 */
   scroll-behavior: smooth;
 }
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff8e8;
+  color: #E0F1FF;
+  background-color: #515261;
   overflow-x: hidden;
 }
 
@@ -33,6 +34,7 @@ a {
   /* 최대값만 제한=반응형 */
   max-width: 1200px;
   margin: 0 auto;
+  background-color: #393D46;
 }
 
 img {
@@ -53,7 +55,7 @@ img {
   display: block;
   width: 80px;
   height: 2px;
-  background-color: #333;
+  background-color: #F6F9FF;
   margin: 10px auto 0;
 }
 
@@ -61,7 +63,7 @@ img {
   width: 120px;
   padding: 10px;
   display: block; /*a, span 태그 같은 인라인 요소를 버튼으로 사용할 수도 있으니 블록으로 지정 */
-  border: 2px solid #333;
+  border: 2px solid #F6F9FF;
   border-radius: 4px;
   font-size: 16px;
   font-weight: 500;
@@ -71,18 +73,18 @@ img {
 }
 
 .bth:hover {
-  background-color: #333;
-  color: #fff;
+  background-color: #F6F9FF;
+  color: #393D46;
 }
 
 .bth.bth--brown {
-  color: #592b18;
-  border-color: #592b18;
+  color: #393D46;
+  border-color: #F6F9FF;
 }
 
 .bth.bth--brown:hover {
-  color: #fff;
-  background-color: #592b18;
+  color: #393D46;
+  background-color: #F6F9FF;
 }
 
 /* .bth.bth--sky {
@@ -223,6 +225,7 @@ right: 30px;
 }
 
 
+
 /* SKILL */
 .skill {
   padding-top: 200px;
@@ -304,6 +307,57 @@ transition: 0.5s;
 }
 
 
+/* .skills {
+border-bottom-color: rgb(57, 62, 70);
+border-bottom-style: none;
+border-bottom-width: 0px;
+border-image-outset: 0;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(57, 62, 70);
+border-left-style: none;
+border-left-width: 0px;
+border-right-color: rgb(57, 62, 70);
+border-right-style: none;
+border-right-width: 0px;
+border-top-color: rgb(57, 62, 70);
+border-top-style: none;
+border-top-width: 0px;
+color: rgb(57, 62, 70);
+display: grid;
+font-family: Montserrat, sans-serif;
+font-feature-settings: normal;
+font-kerning: auto;
+font-optical-sizing: auto;
+font-size: 16px;
+font-stretch: 100%;
+font-style: normal;
+font-variant-alternates: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-variant-position: normal;
+font-variation-settings: normal;
+font-weight: 400;
+grid-template-columns: 674.984px 674.984px;
+height: 604px;
+line-height: 16px;
+margin-bottom: 0px;
+margin-left: -32px;
+margin-right: -32px;
+margin-top: 48px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+unicode-bidi: isolate;
+vertical-align: baseline;
+width: 1349.97px;
+} */
+
 /* WORK */
 .work {
   padding-top: 200px;
@@ -313,11 +367,11 @@ transition: 0.5s;
   display: flex;
 }
 
-.work .port .port__img, .work .port .port__text {
+.work .port .port__video, .work .port .port__text {
   width: 50%;
 }
 
-.work .port .port__img img {
+.work .port .port__video video {
   width: 100%;
   height: 100%;
 }

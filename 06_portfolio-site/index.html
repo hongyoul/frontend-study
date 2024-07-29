@@ -48,7 +48,7 @@ rel="stylesheet">
   <div class="inner">
     <!-- 로고 -->
     <a href="index.html" class="logo">
-      <img src="images/logo.png" alt="로고">
+      <img src="images/logo1.png" alt="로고">
     </a>
 
     <!-- 메뉴 -->
@@ -68,9 +68,24 @@ rel="stylesheet">
 <!-- 배경 비디오 적용(또는 슬라이드로 만들고 싶으면 swiper 참고) -->
 <section class="visual">
   <video autoplay muted loop>
-    <source src="videos/movie2.mp4" type="video/mp4"> <source>
+    <source src="videos/movie5.mp4" type="video/mp4"> <source>
   </video>
 </section>
+
+
+<!-- 자기 소개 모달 -->
+<div id="openModalButton">
+  <a href="javascript:void(0)" class="bth bth--brown btn-modal">프로필</a></div>
+  <div id="modal">
+    <div class="modal__inner">
+      <img src="images/work_4.jpg" alt="샘플">
+      <span class="material-symbols-outlined btn-close">close</span>
+    </div>
+  </div>
+
+
+
+
 
 <!-- ABOUT  -->
 <section id="about" class="about">
@@ -83,7 +98,7 @@ rel="stylesheet">
           <img src="images/icon/icon_contact.png" alt="전화">CONTACT
         </a>
       </div>
-       
+
       <div class="about__img">
         <!-- 본인 프로필 이미지로 변경 -->
         <img src="images/profile.jpg" alt="프로필">
@@ -104,80 +119,118 @@ rel="stylesheet">
   </div>
 </section>
 
-<!-- SkILL -->
+<!-- SKILL -->
 <section id="skill" class="skill scroll-spy">
   <div class="inner">
     <h2 class="title font-en">SKILL</h2>
     <ul class="skill__list">
 
-      <!-- 스킬 추가하려면 li 요소 복사 붙여넣기 -->
+      <!-- 스킬 추가하려면 li 요소 복사 붙여넣기  -->
       <li>
         <div class="font-en">
           <p>Java</p>
         </div>
         <h3 class="font-en">Java<br>Programing</h3>
         <ul>
-          <li>객체지향</li>
-          <li>람다식</li>
-          <li>파일 입출력</li>
-          <li>JDBC</li>
+          <li>ES6+ 문법에 익숙합니다.</li>
+          <li>webpack, parcel 등의 번들러 사용 경험이 있습니다.</li>
+          <li>typescript를 사용할 수 있습니다. </li>
+          <li>디자인 시스템과 atomic 디자인에 대한 이해도가 높습니다.</li>
+          <li>Jest를 활용한 테스트코드 작성 경험이 있습니다.</li>
+          <li>Storybook 작성, 빌드 및 배포 경험이 있습니다.</li>
         </ul>
       </li>
       <li>
         <div class="font-en">
-          <p>Html</p>
+          <p>Visual</p>
         </div>
-        <h3 class="font-en">HTML5</h3>
+        <h3 class="font-en">HTML/CSS/JS</h3>
         <ul>
-          <li>웹페이지 구조 설계</li>
-          <li>시맨틱 태그</li>
+          <li>웹표준을 지키려 노력합니다.</li>
+          <li>CSS 문법에 익숙합니다.</li>
+          <li>styled-component, emotion을 활용할 수 있습니다.</li>
+          <li>BEM 방법론을 적용할 수 있습니다.</li>
+          <li>크로스 브라우징에 대응할 수 있습니다.</li>
+          <li>Antd, Chakra, Tailwind 등의 css 라이브러리를 사용할 수 있습니다.</li>
+          <li>keyframe을 활용한 애니메이션 기법을 활용할 수 있습니다.</li>
         </ul>
       </li>
       <li>
         <div class="font-en">
-          <p>Css</p>
+          <p>Vue</p>
         </div>
-        <h3 class="font-en">CSS3</h3>
+        <h3 class="font-en">Vue</h3>
         <ul>
-          <li>웹페이지 레이아웃 설계</li>
-          <li>웹페이지 디자인</li>
-          <li>반응형 제작</li>
-        </ul>
-      </li>
-      <li>
-        <div class="font-en">
-          <p>Js</p>
-        </div>
-        <h3 class="font-en">JavaScript</h3>
-        <ul>
-          <li>DOM 조작, 제어</li>
-          <li>이벤트 처리</li>
-          <li>비동기 통신</li>
+          <li>vuex 사용 경험이 있습니다.</li>
+          <li>Vue2 option ap를 사용할 수 있습니다.</li>
+          <li> Vue3 composition api를 사용할 수 있습니다.</li>
         </ul>
       </li>
       <li>
         <div class="font-en">
           <p>React</p>
         </div>
-        <h3 class="font-en">React JS</h3>
+        <h3 class="font-en">React</h3>
         <ul>
-          <li>SPA 개발</li>
-          <li>전역 상태 관리</li>
-          <li>클라이언트 라우팅</li>
-          <li>CSR 방식 앱개발</li>
+          <li>redux, redux saga, recoil 등의 상태관리 라이브러리 사용 경험이 있습니다.</li>
+          <li>next.js를 활용한 SSR 개발 경험이 있습니다.</li>
         </ul>
       </li>
+      <li>
     </ul>
   </div>
 </section>
+
+<!-- SKILL 내가 한것 -->
+<!-- <div class="skills">
+  <div data-aos="flip-left" class="SkillBox__Container-mfr9mb-0 cQuYna aos-init aos-animate">
+    <div class="name">React</div>
+    <div class="contents">
+      <div class="contents__content">redux, redux saga, recoil 등의 상태관리 라이브러리 사용 경험이 있습니다.</div>
+      <div class="contents__content">next.js를 활용한 SSR 개발 경험이 있습니다.</div>
+    </div>
+  </div>
+  <div data-aos="flip-left" class="SkillBox__Container-mfr9mb-0 cQuYna aos-init aos-animate">
+    <div class="name">Vue</div>
+    <div class="contents">
+      <div class="contents__content">vuex 사용 경험이 있습니다.</div>
+      <div class="contents__content">Vue2 option api와 Vue3 composition api를 사용할 수 있습니다.</div>
+    </div>
+  </div>
+  <div data-aos="flip-left" class="SkillBox__Container-mfr9mb-0 cQuYna aos-init aos-animate">
+    <div class="name">HTML/CSS</div>
+    <div class="contents">
+      <div class="contents__content">웹표준을 지키려 노력합니다.</div>
+      <div class="contents__content">CSS 문법에 익숙합니다.</div>
+      <div class="contents__content">styled-component, emotion을 활용할 수 있습니다.</div>
+      <div class="contents__content">BEM 방법론을 적용할 수 있습니다.</div>
+      <div class="contents__content">크로스 브라우징에 대응할 수 있습니다.</div>
+      <div class="contents__content">Antd, Chakra, Tailwind 등의 css 라이브러리를 사용할 수 있습니다.</div>
+      <div class="contents__content">keyframe을 활용한 애니메이션 기법을 활용할 수 있습니다.</div>
+    </div>
+  </div>
+  <div data-aos="flip-left" class="SkillBox__Container-mfr9mb-0 cQuYna aos-init aos-animate">
+    <div class="name">Javascript</div>
+    <div class="contents">
+      <div class="contents__content">ES6+ 문법에 익숙합니다.</div>
+      <div class="contents__content">webpack, parcel 등의 번들러 사용 경험이 있습니다.</div>
+      <div class="contents__content">typescript를 사용할 수 있습니다.</div>
+      <div class="contents__content">디자인 시스템과 atomic 디자인에 대한 이해도가 높습니다.</div>
+      <div class="contents__content">Jest를 활용한 테스트코드 작성 경험이 있습니다.</div>
+      <div class="contents__content">Storybook 작성, 빌드 및 배포 경험이 있습니다.</div>
+    </div>
+  </div>
+</div> -->
+
+
 
 <!-- WORK -->
 <section id="work" class="work font-en">
   <div class="inner">
     <h2 class="title">WORK</h2>
     <div class="port">
-      <div class="port__img">
-        <img src="images/work_1.jpg" alt="포토폴리오1">
+      <div class="port__video">
+        <video src="videos/movie6.mp4" type="video/mp4"> <video>
       </div>
       <div class="port__text">
         <h3>프로젝트명</h3>
@@ -194,8 +247,26 @@ rel="stylesheet">
       </div>
     </div>
     <div class="port">
-      <div class="port__img">
-        <img src="images/work_2.jpg" alt="포토폴리오2">
+      <div class="port__video">
+        <video src="videos/movie8.mp4" type="video/mp4"> <video>
+      </div>
+    <div class="port__text">
+      <h3>프로젝트명</h3>
+      <ul>
+        <li><span>주요기능 : </span>주요 기능 설명</li>
+        <li><span> 적용 기술 : </span>HTML, CSS, JS, Java, Spring Boot</li>
+        <li><span> GitHub : </span>깃 허브 주소</li>
+        <li><span> URL : </span>배포 주소</li>
+      </ul>
+      <div class="bth-group">
+        <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="bth">README</a>
+        <a href="javascript:void(0)" class="bth bth--brown btn-modal">모달</a>
+      </div>
+    </div>
+  </div>
+    <div class="port">
+      <div class="port__video">
+        <video src="videos/movie7.mp4" type="video/mp4"> <video>
       </div>
     <div class="port__text">
       <h3>프로젝트명</h3>
@@ -260,9 +331,10 @@ rel="stylesheet">
   </div>
 </div>
 
+
 <!-- SCROLL TO TOP -->
 <div id="to-top">
-  <a href="">
+  <a href="#">
     <span class="material-symbols-outlined">arrow_upward</span>
   </a>
 </div>
