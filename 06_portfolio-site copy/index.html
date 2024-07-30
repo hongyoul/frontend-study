@@ -107,57 +107,15 @@
       <!-- 모달창 버튼 만들기 시작-->
         <p>Click the expressions below.</p>
         <div class="buttons-ctr">
-          <button class="standard active btn-open-modal">standard</button>
-          <script>
-            const modal = document.querySelector('.modal1');
-            const btnOpenModal=document.querySelector('.btn-open-modal');
-    
-            btnOpenModal.addEventListener("click", ()=>{
-                modal.style.display="flex";
-            });
-        </script>
+          <button class="standard active btn-modal" >Profile</button>
           <button class="wink">wink</button>
           <button class="wink">rage</button>
           <button class="wink">happy</button>
         </div>
       </div>
   </section>
-
-<!-- 모달창 내부 -->
-<div id="hj_profilePopup">
-  <section id="hj_profilePopupSection" class="about">
-    <div class="inner" id = "div_profilePopupinner">
-      <h2 class="title">ABOUT</h2>
-      <div class="about__wrapper">
-        <!-- 연락처 버튼 -->
-        <div class="about__bth font-en">
-          <a href="#contact">
-            <img src="images/icon/icon_contact.png" alt="전화">CONTACT
-          </a>
-        </div>
-         
-        <div id= "div_profilePopupImg" class="about__img">
-          <!-- 본인 프로필 이미지로 변경 -->
-          <img src="images/profile.jpg" alt="프로필">
-        </div>
-        <div class="about__text">
-          <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
-          <strong class="slogan font-en">Simple is Best</strong>
-          <h3 class="font-en">Yun Hong Youl</h3>
-          <div>
-            <h4 class="font-en">EDUCATION</h4>
-              <ul>
-                <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
-                <li>23.12 ~ 24.05 풀스택 개발자 과정 수료</li>
-              </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>  
-</div>
-
   <!-- face 이모지 끝 -->
+
 
   <!-- SKILL -->
   <section id="skill" class="skill scroll-spy">
@@ -230,8 +188,31 @@
     <div class="inner">
       <h2 class="title">WORK</h2>
       <div class="port">
-        <div class="port__img">
-          <img src="images/work_1.jpg" alt="포트폴리오1">
+        <div class="port__video ">
+          <video autoplay muted loop>
+            <source src="videos/movie6.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="port__text">
+          <h3>프로젝트명</h3>
+          <ul>
+            <li><span>주요 기능 : </span>주요 기능 설명</li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
+          </ul>
+          <div class="btn-group">
+            <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="btn">README</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal">모달</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="port">
+        <div class="port__video ">
+          <video autoplay muted loop>
+            <source src="videos/movie8.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="port__text">
           <h3>프로젝트명</h3>
@@ -249,8 +230,10 @@
       </div>
 
       <div class="port">
-        <div class="port__img">
-          <img src="images/work_2.jpg" alt="포트폴리오2">
+        <div class="port__video">
+          <video autoplay muted loop>
+            <source src="videos/movie7.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="port__text">
           <h3>프로젝트명</h3>
@@ -310,7 +293,31 @@
   <!-- MODAL -->
   <div id="modal">
     <div class="modal__inner">
-      <img src="images/work_4.jpg" alt="샘플">
+      <div class="about__wrapper">
+        <!-- 연락처 버튼 -->
+        <div class="about__bth font-en">
+          <a href="#contact">
+            <img src="images/icon/icon_contact.png" alt="전화">CONTACT
+          </a>
+        </div>
+         
+        <div id= "div_profilePopupImg" class="about__img">
+          <!-- 본인 프로필 이미지로 변경 -->
+          <img src="images/profile.jpg" alt="프로필">
+        </div>
+        <div class="about__text">
+          <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
+          <strong class="slogan font-en">Simple is Best</strong>
+          <h3 class="font-en">Yun Hong Youl</h3>
+          <div>
+            <h4 class="font-en">EDUCATION</h4>
+              <ul>
+                <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
+                <li>23.12 ~ 24.05 풀스택 개발자 과정 수료</li>
+              </ul>
+          </div>
+        </div>
+      </div>
       <span class="material-symbols-outlined btn-close">close</span>
     </div>
   </div>

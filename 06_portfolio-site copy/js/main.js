@@ -13,38 +13,19 @@ spyEls.forEach(function (spyEl) {
 
 // 모달창 띄우기
 let modalEl = document.querySelector('#modal');
-let modalBtn = document.querySelectorAll('.port .btn-modal');
+let modalBtn = document.querySelectorAll('.btn-modal');
 let closeBtn = document.querySelector('#modal .btn-close');
-let modalProfileButton = document.querySelector('#phj_modalButton');
-let div_profilePopup = document.querySelector('#hj_profilePopup'); 
-let div_PopupBackGround = document.querySelector('#hj_PopupBackGround');
-
-let modalEl = document.querySelector('#modal1');
-let modalBtn = document.querySelectorAll('.btn-open-modal');
-let closeBtn = document.querySelector('#modal1 .btn-close');
-
 console.log(modalBtn);
 console.log(modalBtn[0]);
 console.log(modalBtn[1]);
-console.log(modalProfileButton);
 
 modalBtn[0].addEventListener('click', function () {
-  // console.log('클릭됨');
+  console.log('클릭됨');
   modalEl.style.display = 'flex';
 });
 closeBtn.addEventListener('click', function () {
   modalEl.style.display = 'none';
 });
-modalProfileButton.addEventListener('click', function(){
-  div_profilePopup.style.display = 'flex'
-  div_PopupBackGround.style.display = 'flex';
-})
-
-hj_PopupBackGround.addEventListener('click', function(){
-  div_profilePopup.style.display = 'none'
-  div_PopupBackGround.style.display = 'none';
-})
-
 
 // 현재 연도 표시
 // 날짜 정보를 가진 JS의 Date 객체를 활용
@@ -78,7 +59,3 @@ window.addEventListener('scroll', function () {
     toTopBtn.style.transform = 'translateX(100px)';
   }
 });
-
-
-
-
