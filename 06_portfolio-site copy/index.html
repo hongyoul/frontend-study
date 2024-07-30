@@ -74,6 +74,8 @@
     <div class="inner">
       <h2 class="title font-en">ABOUT</h2>
   </section>
+
+    <!-- face 이모지 시작 -->
   </section>
       <div class="buttons-ctr">
       <div id="main-ctr" class="standard"></div>
@@ -102,15 +104,60 @@
           </g>
         </svg>
       </div>
+      <!-- 모달창 버튼 만들기 시작-->
         <p>Click the expressions below.</p>
         <div class="buttons-ctr">
-          <button class="standard active">standard</button>
+          <button class="standard active btn-open-modal">standard</button>
+          <script>
+            const modal = document.querySelector('.modal1');
+            const btnOpenModal=document.querySelector('.btn-open-modal');
+    
+            btnOpenModal.addEventListener("click", ()=>{
+                modal.style.display="flex";
+            });
+        </script>
           <button class="wink">wink</button>
           <button class="wink">rage</button>
           <button class="wink">happy</button>
         </div>
       </div>
   </section>
+
+<!-- 모달창 내부 -->
+<div id="hj_profilePopup">
+  <section id="hj_profilePopupSection" class="about">
+    <div class="inner" id = "div_profilePopupinner">
+      <h2 class="title">ABOUT</h2>
+      <div class="about__wrapper">
+        <!-- 연락처 버튼 -->
+        <div class="about__bth font-en">
+          <a href="#contact">
+            <img src="images/icon/icon_contact.png" alt="전화">CONTACT
+          </a>
+        </div>
+         
+        <div id= "div_profilePopupImg" class="about__img">
+          <!-- 본인 프로필 이미지로 변경 -->
+          <img src="images/profile.jpg" alt="프로필">
+        </div>
+        <div class="about__text">
+          <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
+          <strong class="slogan font-en">Simple is Best</strong>
+          <h3 class="font-en">Yun Hong Youl</h3>
+          <div>
+            <h4 class="font-en">EDUCATION</h4>
+              <ul>
+                <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
+                <li>23.12 ~ 24.05 풀스택 개발자 과정 수료</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+</div>
+
+  <!-- face 이모지 끝 -->
 
   <!-- SKILL -->
   <section id="skill" class="skill scroll-spy">
