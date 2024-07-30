@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>훈련생이름 포트폴리오</title>
+
+  <!-- 파비콘 적용 -->
+  <!-- 파비콘(favicon.ico)은 프로젝트 폴더의 최상위(Root) 경로에 포함시키면 자동 적용
+    최상위 경로에 없거나, ico가 아닌 별도 파일을 가진 경우에는 <link>로 적용
+  
+    (참고) 파비콘 만들기: https://iconifier.net
+  -->
+  <link rel="icon" href="./favicon.ico">
+
+  <!-- reset.css -->
+  <!-- 스타일 초기화: 브라우저 별로 다른 기본 스타일이 적용되는 것을 초기화 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+  <!-- 구글 머티리얼 아이콘 -->
+  <!-- 구글에서 제공하는 머티리얼 스타일 아이콘, 글자처럼 취급 가능한 장점 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- 구글 웹폰트 -->
+  <!-- 오픈 라이선스 폰트, 한글 지원하는지 확인 및 필요한 굵기를 연결 -->
+  <!-- 한글: Noto Sans Korean, 영문: Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <!-- 폰트 테스트 -->
+  <!-- <span>헬로 월드!</span>
+  <span class="font-en">Hello world!</span> -->
+
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+      <!-- 로고 -->
+      <a href="index.html" class="logo">
+        <img src="images/logo1.png" alt="로고">
+      </a>
+
+      <!-- 메뉴 -->
+      <nav class="font-en">
+        <ul>
+          <!-- 본인의 메뉴 구조에 맞게 변경 -->
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#skill">SKILL</a></li>
+          <li><a href="#work">WORK</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- VISUAL -->
+  <!-- 배경 비디오 적용(또는 슬라이드로 만들고 싶으면 swiper 참고) -->
+  <section class="visual">
+    <video autoplay muted loop>
+      <source src="videos/movie5.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="inner">
+      <h2 class="title font-en">ABOUT</h2>
+  </section>
+  </section>
+      <div class="buttons-ctr">
+      <div id="main-ctr" class="standard"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="151" height="110" viewBox="0 0 151 110">
+          <g id="Page-1" fill="none" fill-rule="evenodd">
+            <circle id="face" cx="75" cy="55" r="50" fill="#FFEB97"/>
+            <g id="face-components">
+              <path id="wk-l-eye" stroke="#000" stroke-width="3" d="M55 59.12C55 54.7 51.418 51 47 51s-8 3.7-8 8.12" stroke-linecap="round"/>
+              <path id="wk-r-eye" stroke="#000" stroke-width="3" d="M110 59c0-4.418-3.582-8.12-8-8.12s-8 3.702-8 8.12" stroke-linecap="round"/>
+              <path id="sm-mouth-3" stroke="#000" stroke-width="3" d="M47.34 72.117s6.627 11.526 26.77 11.526 28.482-12.926 28.482-12.926" stroke-linecap="round"/>
+              <path id="hp-love" fill="#F9767E" d="M32.72 45.607h.003L31.42 56.22l-10.612-1.303c-1.4-.167-2.735-.87-3.67-2.07-1.864-2.383-1.44-5.827.944-7.69 1.122-.878 2.48-1.248 3.797-1.146.2-1.34.893-2.608 2.045-3.508 2.384-1.863 5.828-1.44 7.69.945.96 1.226 1.313 2.733 1.106 4.16z"/>
+              <path id="sm-mouth-2" stroke="#000" stroke-width="3" d="M57.786 79.82s12.038 6.573 26.507.926c14.47-5.647 17.3-18.03 17.3-18.03" stroke-linecap="round"/>
+              <path id="sm-mouth-1" stroke="#000" stroke-width="3" d="M63.5 81.903s2.91 2.202 11.502 2.202c8.59 0 11.502-2.202 11.502-2.202" stroke-linecap="round"/>
+              <path id="st-mouth" stroke="#000" stroke-width="3" d="M61.5 76.903h27.003" stroke-linecap="round"/>
+              <path id="st-l-eye" stroke="#000" stroke-width="5" d="M47 63.5c1.38 0 2.5-1.12 2.5-2.503S48.38 58.5 47 58.5s-2.5 1.114-2.5 2.497c0 1.382 1.12 2.503 2.5 2.503z" stroke-linecap="round"/>
+              <path id="st-r-eye" stroke="#000" stroke-width="5" d="M101.5 64c1.38 0 2.5-1.12 2.5-2.503S102.88 59 101.5 59 99 60.114 99 61.497C99 62.88 100.12 64 101.5 64z" stroke-linecap="round"/>
+              <path id="hg-l-eye" stroke="#000" stroke-width="5" d="M47 53.5c1.38 0 2.5-1.12 2.5-2.503S48.38 48.5 47 48.5s-2.5 1.114-2.5 2.497c0 1.382 1.12 2.503 2.5 2.503z" stroke-linecap="round"/>
+              <path id="hg-r-eye" stroke="#000" stroke-width="5" d="M101.5 54c1.38 0 2.5-1.12 2.5-2.503S102.88 49 101.5 49 99 50.114 99 51.497C99 52.88 100.12 54 101.5 54z" stroke-linecap="round"/>
+              <path id="rg-mouth" stroke="#000" stroke-width="3" d="M60.9 79.478s4.24-3.546 13.496-3.546c9.255 0 14.503 3.546 14.503 3.546" stroke-linecap="round"/>
+              <path id="rg-l-eye" stroke="#000" stroke-width="3" d="M39.5 57.5s4.85 1.294 8.11 2.665c3.26 1.372 6.89 3.335 6.89 3.335" stroke-linecap="round"/>
+              <path id="rg-r-eye" stroke="#000" stroke-width="3" d="M108.5 57.5s-4.85 1.294-8.11 2.665C97.13 61.537 93.5 63.5 93.5 63.5" stroke-linecap="round"/>
+              <path id="mouth" stroke="#000" stroke-width="3" d="M61.5 76.903h27.003" stroke-linecap="round"/>
+              <path id="l-eye" stroke="#000" stroke-width="5" d="M47 63.5c1.38 0 2.5-1.12 2.5-2.503S48.38 58.5 47 58.5s-2.5 1.114-2.5 2.497c0 1.382 1.12 2.503 2.5 2.503z" stroke-linecap="round"/>
+              <path id="r-eye" stroke="#000" stroke-width="5" d="M101.5 64c1.38 0 2.5-1.12 2.5-2.503S102.88 59 101.5 59 99 60.114 99 61.497C99 62.88 100.12 64 101.5 64z" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+        <p>Click the expressions below.</p>
+        <div class="buttons-ctr">
+          <button class="standard active">standard</button>
+          <button class="wink">wink</button>
+          <button class="wink">rage</button>
+          <button class="wink">happy</button>
+        </div>
+      </div>
+  </section>
+
+  <!-- SKILL -->
+  <section id="skill" class="skill scroll-spy">
+    <div class="inner">
+      <h2 class="title font-en">SKILL</h2>
+      <ul class="skill__list">
+        <!-- 스킬 추가하려면 li 요소 복사 붙여넣기 -->
+        <li>
+          <div class="font-en">
+            <p>Java</p>
+          </div>
+          <h3 class="font-en">Java<br>Programing</h3>
+          <ul>
+            <li>객체지향</li>
+            <li>람다식</li>
+            <li>파일 입출력</li>
+            <li>JDBC</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Html</p>
+          </div>
+          <h3 class="font-en">HTML5</h3>
+          <ul>
+            <li>웹페이지 구조 설계</li>
+            <li>시맨틱 태그</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Css</p>
+          </div>
+          <h3 class="font-en">CSS3</h3>
+          <ul>
+            <li>웹페이지 레이아웃 설계</li>
+            <li>웹페이지 디자인</li>
+            <li>반응형 제작</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Js</p>
+          </div>
+          <h3 class="font-en">JavaScript</h3>
+          <ul>
+            <li>DOM 조작, 제어</li>
+            <li>이벤트 처리</li>
+            <li>비동기 통신</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>React</p>
+          </div>
+          <h3 class="font-en">React JS</h3>
+          <ul>
+            <li>SPA 개발</li>
+            <li>전역 상태 관리</li>
+            <li>클라이언트 라우팅</li>
+            <li>CSR 방식 앱개발</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="work font-en">
+    <div class="inner">
+      <h2 class="title">WORK</h2>
+      <div class="port">
+        <div class="port__img">
+          <img src="images/work_1.jpg" alt="포트폴리오1">
+        </div>
+        <div class="port__text">
+          <h3>프로젝트명</h3>
+          <ul>
+            <li><span>주요 기능 : </span>주요 기능 설명</li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
+          </ul>
+          <div class="btn-group">
+            <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="btn">README</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal">모달</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="port">
+        <div class="port__img">
+          <img src="images/work_2.jpg" alt="포트폴리오2">
+        </div>
+        <div class="port__text">
+          <h3>프로젝트명</h3>
+          <ul>
+            <li><span>주요 기능 : </span>주요 기능 설명</li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
+          </ul>
+          <div class="btn-group">
+            <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="btn">README</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal">모달</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact font-en scroll-spy">
+    <div class="inner">
+      <h2 class="title">CONTACT</h2>
+      <div class="contact__info">
+        <ul>
+          <li><a href="https://github.com/geoblo">github.com/geoblo</a></li>
+          <li>010-1234-5678</li>
+          <li>geoblo@naver.com</li>
+        </ul>
+      </div>
+      <div class="contact__sns">
+        <ul>
+          <li>
+            <a href="인스타그램 주소" target="_blank">
+              <img src="images/icon/icon_insta.png" alt="인스타그램">
+            </a>
+          </li>
+          <li>
+            <a href="유튜브 주소" target="_blank">
+              <img src="images/icon/icon_youtube.png" alt="유튜브">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="inner">
+      <p class="copyright">
+        &copy; <span class="this-year"></span>
+        훈련생이름. <span class="font-en">All Rights Reserved.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modal">
+    <div class="modal__inner">
+      <img src="images/work_4.jpg" alt="샘플">
+      <span class="material-symbols-outlined btn-close">close</span>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP -->
+  <div id="to-top">
+    <a href="#">
+      <span class="material-symbols-outlined">arrow_upward</span>
+    </a>
+  </div>
+</body>
+</html>
