@@ -178,12 +178,12 @@ header nav ul li a:hover {
   margin-top: 10px;
 }
 
-.about .about__wrapper .about__img {
+.about .about__wrapper profile_hj .standard {
 width: 40%;
 }
 
 .about .about__wrapper .about__img img {
-width: 100%;
+/* width: 100%; */
 border-radius: 50%;
 }
 
@@ -282,7 +282,7 @@ p {
     pointer-events: auto;
     
     &.active {
-      background: #FFEB97;
+      background : #FFEB97;
       pointer-events: none;
     }
     
