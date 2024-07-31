@@ -35,27 +35,22 @@ let thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();
 
 // 페이지 최상단으로 이동
+
 let toTopBtn = document.querySelector('#to-top');
 
 // 페이지에 스크롤 이벤트 감지를 추가
 // window: 브라우저 창 객체
 window.addEventListener('scroll', function () {
-  // console.log(window.scrollY); // y축 스크롤 위치
+  console.log(window.scrollY); // Y축 스크롤 위치 확인
 
-  // 페이지 스크롤 위치가 
-  // 500px을 넘으면 요소를 보이고,
-  // 500px을 넘지 않으면 요소 숨기기!
-  if (window.scrollY > 500) {
-    // 요소 보이기
-    // toTopBtn.style.display = 'flex';
-    // 애니메이션 처리를 하고 싶다면
-    toTopBtn.style.opacity = 1;
+  // 페이지 스크롤 위치가 500px을 넘으면 요소를 보여주고,
+  // 500px을 넘지 않으면 요소 숨기기
+
+  if (scrollY > 500) {
+    toTopBtn.style.opacity = '1'
     toTopBtn.style.transform = 'translateX(0)';
   } else {
-    // 요소 숨기기
-    // toTopBtn.style.display = 'none';
-    // 애니메이션 처리를 하고 싶다면
-    toTopBtn.style.opacity = 0;
+    toTopBtn.style.opacity = '0'
     toTopBtn.style.transform = 'translateX(100px)';
   }
 });
