@@ -29,15 +29,11 @@ a {
 }
 
 .inner {
-  /* 고정 길이=고정형 */
-  /* width: 1200px; */
-  /* 최대값만 제한=반응형 */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 img {
-  /* 이미지가 인라인 요소라서 발생하는 문자 기준선(baseline) 아래의 공간을 제거하기 위해 */
   display: block;
 }
 
@@ -77,21 +73,19 @@ img {
 header {
   background-color: #393D46;
   border-bottom: 1px solid #c8c8c8;
-  /* 고정된 헤더 만들기 */
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 9;
 }
 header > .inner {
-  height: 127px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 header .logo img {
-  width: 99px;
-  /* 가로 너비만 지정하면 세로 높이는 비율에 맞춰 정해짐 */
+  width: 90px;
 }
 header nav ul {
   display: flex;
@@ -108,10 +102,6 @@ header nav ul li a:hover {
 
 /* VISUAL */
 .visual {
-  /* (중요)
-    헤더가 fixed 되어 일반 배치 흐름에서 벗어남
-    fixed 헤더 다음에 오는 섹션은 헤더의 높이만큼 외부 여백 추가 필요
-  */
   margin-top: 115px;
   position: absolute;
   top: 0;
@@ -139,19 +129,12 @@ header nav ul li a:hover {
 
 /* ABOUT */
 .about { 
-  /* (주의) 100%는 부모의 가로 길이(<body>)가 기준이 됨 */
-  /* margin-top: 100%;  */
   margin-top: 111vh;
-  /* padding-top: 100px; */
 } 
 .about .inner {
   padding-bottom: 30px;
   position: relative;
 }
-
-/* .about .title {
-  margin-bottom: 0;
-} */
 
 
 /* face 이모지 시작 */
@@ -166,6 +149,7 @@ header nav ul li a:hover {
   vertical-align: middle;
   text-align: center;
   justify-content: center;
+  margin-bottom: 70px;
 }
 
   button {
@@ -263,7 +247,7 @@ p {
 .skill .skill__basis__videos video {
   width: 100%;
   height: 100%;
-  
+  margin-top: -50px;
 }
 .skill .skill__basis__videos > div {
   margin-top: 60px;
@@ -541,4 +525,9 @@ footer .copyright {
   margin: 4px 0;
   font-size: 15px;
   text-align: center;
+}
+
+.copyright .this-year {
+  letter-spacing: 1px;
+  font-size: 14px;
 }

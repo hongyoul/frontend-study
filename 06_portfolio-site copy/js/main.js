@@ -54,3 +54,98 @@ window.addEventListener('scroll', function () {
     toTopBtn.style.transform = 'translateX(100px)';
   }
 });
+$(document).ready(function(){
+    
+  var mainCtr = $("#main-ctr"),
+      lEye = $("#l-eye"),
+      rEye = $("#r-eye"),
+      mouth = $("#mouth"),
+      hpLove = $("#hp-love"),
+      button = $("button");
+  
+  // animatable var
+  
+  var wkREye = "#wk-r-eye",
+      wkLEye = "#wk-l-eye",
+      smMouth1 = "#sm-mouth-1",
+      smMouth2 = "#sm-mouth-2",
+      smMouth3 = "#sm-mouth-3",
+      stREye = "#st-r-eye",
+      stLEye = "#st-l-eye",
+      rgREye = "#rg-r-eye",
+      rgLEye = "#rg-l-eye",
+      hgREye = "#hg-r-eye",
+      hgLEye = "#hg-l-eye",
+      stMouth = "#st-mouth",
+      rgMouth = "#rg-mouth";
+  
+  var tl = new TimelineMax({});
+  tl.timeScale(1.25);
+
+standardAnim
+function standardAnim(){
+  tl
+    .to([lEye, rEye], .15, {
+      delay: .6,
+      scaleY: 0, transformOrigin: "center center",
+    })
+    .to([lEye, rEye], .15, {
+      scaleY: 1
+    })
+    .to([lEye, rEye], .15, {
+      scaleY: 0, transformOrigin: "center center",
+    })
+    .to([lEye, rEye], .15, {
+      scaleY: 1
+    })
+    .to([lEye, rEye, mouth], .3, {
+      x: "-5px"
+    })
+    .to([lEye, rEye], .15, {
+      scaleY: 0, transformOrigin: "center center",
+    })
+    .to([lEye, rEye], .15, {
+      scaleY: 1
+    })
+    .to([lEye, rEye, mouth], .3, {
+      x: "10px"
+    })
+    .to([lEye, rEye], .15, {
+      scaleY: 0, transformOrigin: "center center",
+    })
+    .to([lEye, rEye], .15, {
+      scaleY: 1
+    })
+    .to([lEye, rEye, mouth], .3, {
+      x: "0px"
+    })
+}
+
+standardAnim();
+  
+button.on("click", function(){
+  var className = $(this).text();
+  mainCtr.attr("class", className);
+  
+  $(this).addClass("active").siblings().removeClass("active");
+  
+  if(mainCtr.hasClass("standard")) {
+    standard();
+    standardAnim();
+  }
+
+  if(mainCtr.hasClass("wink")) {
+    wink();
+    smAnim();
+  }
+
+  if(mainCtr.hasClass("happy")) {
+    happy();
+    smAnim();
+  }
+
+  if(mainCtr.hasClass("rage")) {
+    raging();
+  }
+  });
+});
