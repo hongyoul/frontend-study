@@ -45,7 +45,7 @@
     <div class="inner">
       <!-- 로고 -->
       <a href="index.html" class="logo">
-        <img src="images/logo1.png" alt="로고">
+        <img src="images/logo.png" alt="로고">
       </a>
 
       <!-- 메뉴 -->
@@ -58,6 +58,11 @@
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
+
+      <!-- 햄버거 버튼 -->
+      <a href="javascript:void(0)" class="btn-hamburger">
+        <span class="material-symbols-outlined">menu</span>
+      </a>
     </div>
   </header>
 
@@ -65,7 +70,7 @@
   <!-- 배경 비디오 적용(또는 슬라이드로 만들고 싶으면 swiper 참고) -->
   <section class="visual">
     <video autoplay muted loop>
-      <source src="videos/movie5.mp4" type="video/mp4">
+      <source src="videos/movie2.mp4" type="video/mp4">
     </video>
   </section>
 
@@ -73,128 +78,138 @@
   <section id="about" class="about">
     <div class="inner">
       <h2 class="title font-en">ABOUT</h2>
-    </div>
-  </section>
-
-    <!-- face 이모지 시작 -->
-  <section>
-      <div class="buttons-ctr">
-      <div id="main-ctr" class="standard"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 151 110">
-          <g id="Page-1" fill="none" fill-rule="evenodd">
-            <circle id="face" cx="75" cy="55" r="50" fill="#FFEB97"/>
-            <g id="face-components">
-              <path id="wk-l-eye" stroke="#000" stroke-width="3" d="M55 59.12C55 54.7 51.418 51 47 51s-8 3.7-8 8.12" stroke-linecap="round"/>
-              <path id="wk-r-eye" stroke="#000" stroke-width="3" d="M110 59c0-4.418-3.582-8.12-8-8.12s-8 3.702-8 8.12" stroke-linecap="round"/>
-              <path id="sm-mouth-3" stroke="#000" stroke-width="3" d="M47.34 72.117s6.627 11.526 26.77 11.526 28.482-12.926 28.482-12.926" stroke-linecap="round"/>
-              <path id="hp-love" fill="#F9767E" d="M32.72 45.607h.003L31.42 56.22l-10.612-1.303c-1.4-.167-2.735-.87-3.67-2.07-1.864-2.383-1.44-5.827.944-7.69 1.122-.878 2.48-1.248 3.797-1.146.2-1.34.893-2.608 2.045-3.508 2.384-1.863 5.828-1.44 7.69.945.96 1.226 1.313 2.733 1.106 4.16z"/>
-              <path id="sm-mouth-2" stroke="#000" stroke-width="3" d="M57.786 79.82s12.038 6.573 26.507.926c14.47-5.647 17.3-18.03 17.3-18.03" stroke-linecap="round"/>
-              <path id="sm-mouth-1" stroke="#000" stroke-width="3" d="M63.5 81.903s2.91 2.202 11.502 2.202c8.59 0 11.502-2.202 11.502-2.202" stroke-linecap="round"/>
-              <path id="st-mouth" stroke="#000" stroke-width="3" d="M61.5 76.903h27.003" stroke-linecap="round"/>
-              <path id="st-l-eye" stroke="#000" stroke-width="5" d="M47 63.5c1.38 0 2.5-1.12 2.5-2.503S48.38 58.5 47 58.5s-2.5 1.114-2.5 2.497c0 1.382 1.12 2.503 2.5 2.503z" stroke-linecap="round"/>
-              <path id="st-r-eye" stroke="#000" stroke-width="5" d="M101.5 64c1.38 0 2.5-1.12 2.5-2.503S102.88 59 101.5 59 99 60.114 99 61.497C99 62.88 100.12 64 101.5 64z" stroke-linecap="round"/>
-              <path id="hg-l-eye" stroke="#000" stroke-width="5" d="M47 53.5c1.38 0 2.5-1.12 2.5-2.503S48.38 48.5 47 48.5s-2.5 1.114-2.5 2.497c0 1.382 1.12 2.503 2.5 2.503z" stroke-linecap="round"/>
-              <path id="hg-r-eye" stroke="#000" stroke-width="5" d="M101.5 54c1.38 0 2.5-1.12 2.5-2.503S102.88 49 101.5 49 99 50.114 99 51.497C99 52.88 100.12 54 101.5 54z" stroke-linecap="round"/>
-              <path id="rg-mouth" stroke="#000" stroke-width="3" d="M60.9 79.478s4.24-3.546 13.496-3.546c9.255 0 14.503 3.546 14.503 3.546" stroke-linecap="round"/>
-              <path id="rg-l-eye" stroke="#000" stroke-width="3" d="M39.5 57.5s4.85 1.294 8.11 2.665c3.26 1.372 6.89 3.335 6.89 3.335" stroke-linecap="round"/>
-              <path id="rg-r-eye" stroke="#000" stroke-width="3" d="M108.5 57.5s-4.85 1.294-8.11 2.665C97.13 61.537 93.5 63.5 93.5 63.5" stroke-linecap="round"/>
-              <path id="mouth" stroke="#000" stroke-width="3" d="M61.5 76.903h27.003" stroke-linecap="round"/>
-              <path id="l-eye" stroke="#000" stroke-width="5" d="M47 63.5c1.38 0 2.5-1.12 2.5-2.503S48.38 58.5 47 58.5s-2.5 1.114-2.5 2.497c0 1.382 1.12 2.503 2.5 2.503z" stroke-linecap="round"/>
-              <path id="r-eye" stroke="#000" stroke-width="5" d="M101.5 64c1.38 0 2.5-1.12 2.5-2.503S102.88 59 101.5 59 99 60.114 99 61.497C99 62.88 100.12 64 101.5 64z" stroke-linecap="round"/>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <!-- 모달창 버튼 만들기 시작-->
-        <p>Click the expressions below.</p>
-        <div class="buttons-ctr">
-          <button class="standard active btn-modal" >Profile</button>
-          <button class="wink">wink</button>
-          <button class="wink">rage</button>
-          <button class="wink">happy</button>
+      <div class="about__wrapper">
+        <div class="about__img">
+          <!-- 본인 프로필 이미지로 변경 -->
+          <img src="images/profile.jpg" alt="프로필">
         </div>
-
-  </section>
-  <!-- face 이모지 끝 -->
-
-
-  <!-- SKILL -->
-  <section id="skill" class="skill scroll-spy">
-      <div class="skill__basis__videos">
-        <video autoplay muted loop>
-          <source src="videos/movie10.mp4" type="video/mp4">
-        </video>
-        <div>
-          <h2 class="title font-en">SKILL</h2>
-          <div class="skill__videos">
-          <video autoplay muted loop>
-            <source src="videos/movie9.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-    </section>
-    
-    <!-- WORK -->
-    <section id="work" class="work font-en">
-      <div class="inner">
-        <h2 class="title">WORK</h2>
-        <div class="port">
-        <div class="port__video ">
-          <video autoplay muted loop>
-            <source src="videos/movie6.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="port__text">
-          <h3>검색창 생성</h3>
-          <ul>
-            <li><span>주요 기능 : </span>마우스 반응 감지 및 검색 버튼 활성화</li>
-            <li><span>적용 기술 : </span> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa dolores, explicabo sunt sint corrupti fugit impedit ullam, facilis eius delectus iste nesciunt tenetur. Ipsam cupiditate in atque, dolorum id impedit?
-            </li>
-          </ul>
-          <div class="btn-group">
-            <a href="https://codepen.io/trending" target="_blank" class="btn">Shortcuts</a>
-            <a href="https://github.com/hongyoul" class="btn btn-modal">README</a>
+        <div class="about__text">
+          <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
+          <strong class="slogan font-en">Simple is Best</strong>
+          <h3 class="font-en">Kim Jae Hyun</h3>
+          <div>
+            <h4 class="font-en">EDUCATION</h4>
+            <ul>
+              <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
+              <li>23.12 ~ 24.05 풀스택 개발자 과정 수료</li>
+            </ul>
           </div>
         </div>
       </div>
-      
+
+      <!-- 연락처 버튼 -->
+      <div class="about__btn font-en">
+        <a href="#contact">
+          <img src="images/icon/icon_contact.png" alt="전화">CONTACT
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILL -->
+  <section id="skill" class="skill scroll-spy">
+    <div class="inner">
+      <h2 class="title font-en">SKILL</h2>
+      <ul class="skill__list">
+        <!-- 스킬 추가하려면 li 요소 복사 붙여넣기 -->
+        <li>
+          <div class="font-en">
+            <p>Java</p>
+          </div>
+          <h3 class="font-en">Java<br>Programing</h3>
+          <ul>
+            <li>객체지향</li>
+            <li>람다식</li>
+            <li>파일 입출력</li>
+            <li>JDBC</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Html</p>
+          </div>
+          <h3 class="font-en">HTML5</h3>
+          <ul>
+            <li>웹페이지 구조 설계</li>
+            <li>시맨틱 태그</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Css</p>
+          </div>
+          <h3 class="font-en">CSS3</h3>
+          <ul>
+            <li>웹페이지 레이아웃 설계</li>
+            <li>웹페이지 디자인</li>
+            <li>반응형 제작</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>Js</p>
+          </div>
+          <h3 class="font-en">JavaScript</h3>
+          <ul>
+            <li>DOM 조작, 제어</li>
+            <li>이벤트 처리</li>
+            <li>비동기 통신</li>
+          </ul>
+        </li>
+        <li>
+          <div class="font-en">
+            <p>React</p>
+          </div>
+          <h3 class="font-en">React JS</h3>
+          <ul>
+            <li>SPA 개발</li>
+            <li>전역 상태 관리</li>
+            <li>클라이언트 라우팅</li>
+            <li>CSR 방식 앱개발</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="work font-en">
+    <div class="inner">
+      <h2 class="title">WORK</h2>
       <div class="port">
-        <div class="port__video ">
-          <video autoplay muted loop>
-            <source src="videos/movie8.mp4" type="video/mp4">
-          </video>
+        <div class="port__img">
+          <img src="images/work_1.jpg" alt="포트폴리오1">
         </div>
         <div class="port__text">
           <h3>프로젝트명</h3>
           <ul>
             <li><span>주요 기능 : </span>주요 기능 설명</li>
-            <li><span>적용 기술 : </span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci aut vitae officia ullam exercitationem eum quis nesciunt hic fugit voluptatem tempora dolore pariatur nulla reprehenderit sapiente, eos fuga, facere ducimus!
-            </li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
           </ul>
           <div class="btn-group">
-            <a href="https://codepen.io/trending" target="_blank" class="btn">Shortcuts</a>
-            <a href="https://github.com/hongyoul" class="btn btn-modal">README</a>
+            <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="btn">README</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal">모달</a>
           </div>
         </div>
       </div>
 
       <div class="port">
-        <div class="port__video">
-          <video autoplay muted loop>
-            <source src="videos/movie7.mp4" type="video/mp4">
-          </video>
+        <div class="port__img">
+          <img src="images/work_2.jpg" alt="포트폴리오2">
         </div>
         <div class="port__text">
           <h3>프로젝트명</h3>
           <ul>
-            <li><span>주요 기능 : </span>JavaScript을 활용하여 동작기능 구현</li>
-            <li><span>적용 기술 : </span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim soluta incidunt reiciendis natus deleniti magni consequuntur accusamus sunt laudantium sed laborum molestiae animi, eius qui rem tenetur harum mollitia libero.
-            </li>
+            <li><span>주요 기능 : </span>주요 기능 설명</li>
+            <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
+            <li><span>GitHub : </span>깃허브 주소</li>
+            <li><span>URL : </span>배포 주소</li>
           </ul>
           <div class="btn-group">
-            <a href="https://codepen.io/trending" target="_blank" class="btn">Shortcuts</a>
-            <a href="https://github.com/hongyoul" class="btn btn-modal">README</a>
+            <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="btn">README</a>
+            <a href="javascript:void(0)" class="btn btn--brown btn-modal">모달</a>
           </div>
         </div>
       </div>
@@ -207,20 +222,20 @@
       <h2 class="title">CONTACT</h2>
       <div class="contact__info">
         <ul>
-          <li><a href="https://github.com/hongyoul">https://github.com/hongyoul</a></li>
+          <li><a href="https://github.com/geoblo">github.com/geoblo</a></li>
           <li>010-1234-5678</li>
-          <li>honghong@naver.com</li>
+          <li>geoblo@naver.com</li>
         </ul>
       </div>
       <div class="contact__sns">
         <ul>
           <li>
-            <a href="https://url.kr/2w6ck3" target="_blank">
+            <a href="인스타그램 주소" target="_blank">
               <img src="images/icon/icon_insta.png" alt="인스타그램">
             </a>
           </li>
           <li>
-            <a href="https://www.youtube.com/@user-vg1uh1qn2c" target="_blank">
+            <a href="유튜브 주소" target="_blank">
               <img src="images/icon/icon_youtube.png" alt="유튜브">
             </a>
           </li>
@@ -234,7 +249,7 @@
     <div class="inner">
       <p class="copyright">
         &copy; <span class="this-year"></span>
-        Yun Hong Youl. <span class="font-en">All Rights Reserved.</span>
+        훈련생이름. <span class="font-en">All Rights Reserved.</span>
       </p>
     </div>
   </footer>
@@ -242,32 +257,7 @@
   <!-- MODAL -->
   <div id="modal">
     <div class="modal__inner">
-      <div class="about__wrapper">
-        <!-- 연락처 버튼 -->
-        <div class="about__btn font-en">
-          <a href="#contact">
-            <img src="images/icon/icon_contact2.png" alt="전화">CONTACT
-          </a>
-        </div>
-        <div id= "div_profilePopupImg" class="about__img">
-          <!-- 본인 프로필 이미지로 변경 -->
-          <img src="images/img2525.jpg" alt="프로필">
-        </div>
-        <div class="about__text">
-          <!-- 본인 슬로건, 이름(생년월), 교육 사항 등 작성 -->
-          <h1 class="font-en">Yun Hong Youl</h1>
-          <div class="education">
-            <h4 class="font-en">EDUCATION</h4>
-            <ul>
-              <li>10.03 ~ 12.02 OO학교 OO과 졸업</li>
-              <li>23.12 ~ 24.05 풀스택 개발자 과정 수료</li>
-            </ul>
-          </div>
-          <h2>Life Quotes</h2>
-          <strong class="slogan font-en">
-            You will face many defeats in life, but never let yourself be defeated.</strong>
-        </div>
-      </div>
+      <img src="images/work_4.jpg" alt="샘플">
       <span class="material-symbols-outlined btn-close">close</span>
     </div>
   </div>
@@ -275,8 +265,7 @@
   <!-- SCROLL TO TOP -->
   <div id="to-top">
     <a href="#">
-      <img src="images/icon_top2.png" alt="화살표" class="top2__icon">
-      <!-- <span class="material-symbols-outlined">stat_2</span> -->
+      <span class="material-symbols-outlined">arrow_upward</span>
     </a>
   </div>
 </body>

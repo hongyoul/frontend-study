@@ -260,6 +260,7 @@ p {
   height: 100%;
   object-fit: cover;
   z-index: 100;
+
 }
 
 .skill .skill__basis__videos > div .skill__videos {
@@ -531,3 +532,17 @@ footer .copyright {
   letter-spacing: 1px;
   font-size: 14px;
 }
+
+
+@media screen and (max-width: 998px) {
+
+  .skill .title {
+    padding-top: 26px;
+}
+
+  .skill .skill__basis__videos {
+    padding: 127px 0;
+  }
+}
+
+

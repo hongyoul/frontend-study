@@ -13,14 +13,14 @@ spyEls.forEach(function (spyEl) {
 
 // 모달창 띄우기
 let modalEl = document.querySelector('#modal');
-let modalBtn = document.querySelectorAll('.btn-modal');
+let modalBtn = document.querySelectorAll('.port .btn-modal');
 let closeBtn = document.querySelector('#modal .btn-close');
 console.log(modalBtn);
 console.log(modalBtn[0]);
 console.log(modalBtn[1]);
 
 modalBtn[0].addEventListener('click', function () {
-  console.log('클릭됨');
+  // console.log('클릭됨');
   modalEl.style.display = 'flex';
 });
 closeBtn.addEventListener('click', function () {
@@ -35,22 +35,56 @@ let thisYear = document.querySelector('.this-year');
 thisYear.textContent = new Date().getFullYear();
 
 // 페이지 최상단으로 이동
-
 let toTopBtn = document.querySelector('#to-top');
 
 // 페이지에 스크롤 이벤트 감지를 추가
 // window: 브라우저 창 객체
 window.addEventListener('scroll', function () {
-  console.log(window.scrollY); // Y축 스크롤 위치 확인
+  // console.log(window.scrollY); // y축 스크롤 위치
 
-  // 페이지 스크롤 위치가 500px을 넘으면 요소를 보여주고,
-  // 500px을 넘지 않으면 요소 숨기기
-
-  if (scrollY > 500) {
-    toTopBtn.style.opacity = '1'
+  // 페이지 스크롤 위치가 
+  // 500px을 넘으면 요소를 보이고,
+  // 500px을 넘지 않으면 요소 숨기기!
+  if (window.scrollY > 500) {
+    // 요소 보이기
+    // toTopBtn.style.display = 'flex';
+    // 애니메이션 처리를 하고 싶다면
+    toTopBtn.style.opacity = 1;
     toTopBtn.style.transform = 'translateX(0)';
   } else {
-    toTopBtn.style.opacity = '0'
+    // 요소 숨기기
+    // toTopBtn.style.display = 'none';
+    // 애니메이션 처리를 하고 싶다면
+    toTopBtn.style.opacity = 0;
     toTopBtn.style.transform = 'translateX(100px)';
   }
 });
+
+// 모바일용 메뉴
+let btnHamburger = document.querySelector('.btn-hamburger');
+let navEl = document.querySelector('header nav');
+let menuIttems = document.querySelectorAll('header nav ul li a');
+console.log(menuIttems);
+
+// let이랑 constant을 사용한다.
+
+
+btnHamburger.addEventListener('click', function() {
+  //JS로 클래스를 제어하는 메소드
+  //자주사용하는 메소드 : add()/remove()/toggle()/contains()
+
+  // if (navEl.classList.contains('active')) {
+  //   navEl.classList.remove('active');
+  // } else {
+  //   navEl.classList.add('active');
+  // }
+
+  navEl.classList.toggle('active');
+})
+
+// 자바 스크립트는 함수를 전달하지 못하여
+menuIttems.forEach(function(menuIttems) {  //function'()'반복해서 사용할 수 있는 메소드
+  menuIttems.addEventListener('click', function(){
+    navEl.classList.remove('active');
+  })
+}); 
